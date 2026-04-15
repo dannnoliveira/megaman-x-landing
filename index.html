@@ -1,0 +1,678 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mega Man X - Maverick Hunter Base</title>
+    <meta name="description" content="Arquivo de evolução de Mega Man X1 a X6.">
+
+    <!-- Google Fonts for digital aesthetics -->
+    <link
+        href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&family=Inter:wght@300;400;600&display=swap"
+        rel="stylesheet">
+
+    <link rel="stylesheet" href="assets/css/styles.css">
+</head>
+
+<body>
+    <div id="particles-container"></div>
+
+    <!-- Navbar -->
+    <nav class="navbar">
+        <a href="#home" class="logo">
+            MEGA MAN <span class="x-red">X</span>
+        </a>
+        <ul class="nav-links">
+            <li><a href="#home">Base Hunter</a></li>
+            <li><a href="#about">A Rebelião</a></li>
+            <li><a href="#heroes">Evolução (X1-X6)</a></li>
+            <li><a href="#detonado">Detonado X1</a></li>
+        </ul>
+        <button class="digi-btn btn-small">Conectar Sistema</button>
+    </nav>
+
+    <!-- Hero Section -->
+    <header id="home" class="hero">
+        <div class="hero-content">
+            <h1 class="glitch" data-text="Maverick Hunter Base">Maverick Hunter Base</h1>
+            <p>Ano 21XX. Os Mavericks iniciaram sua rebelião. Junte-se a X e Zero na luta para proteger a humanidade e o
+                futuro dos Reploids, desde o despertar até a ameaça Nightmare.</p>
+            <button class="digi-btn pulse">Iniciar Missão</button>
+        </div>
+        <div class="hero-visual">
+            <div class="digivice-glow x-buster-glow">
+                <div class="x-core"></div>
+            </div>
+        </div>
+    </header>
+
+    <!-- About Section -->
+    <section id="about" class="about-section">
+        <h2 class="section-title">Alerta Maverick</h2>
+        <div class="glass-card">
+            <p>O ex-comandante <strong>Sigma</strong> declarou guerra à humanidade. Com o vírus Maverick se espalhando,
+                cabe aos <em>Maverick Hunters</em> investigar as anomalias e restaurar a paz. Mas a cada geração, a
+                ameaça evolui e se torna mais apocalíptica.</p>
+        </div>
+    </section>
+
+    <!-- Lore Interactive Section -->
+    <section id="lore" class="lore-section">
+        <h2 class="section-title">Arquivos da Base Central</h2>
+        <div class="lore-container">
+            <div class="lore-text-panel" id="lore-display">
+                <h3 id="lore-title">Selecione um Arquivo</h3>
+                <p id="lore-content">Acesse os terminais no holograma da cápsula interativa para decodificar os dados
+                    históricos sobre os heróis e fundadores da Era 21XX.</p>
+            </div>
+
+            <div class="interactive-illustration">
+                <!-- Dr. Light Hologram Capsule Structure -->
+                <div class="hologram-capsule">
+                    <div class="capsule-base"></div>
+                    <div class="capsule-light"></div>
+                    <div class="capsule-rings"></div>
+
+                    <img id="active-character-img"
+                        src="https://static.wikia.nocookie.net/murderseries/images/a/a5/X.png/revision/latest?cb=20150312040005"
+                        alt="Personagem Holográfico" class="hologram-char-img">
+
+                    <!-- Interactive Nodes -->
+                    <div class="orbital-node node-x" data-target="x" title="Mega Man X">
+                        <img src="https://static.wikia.nocookie.net/murderseries/images/a/a5/X.png/revision/latest?cb=20150312040005"
+                            alt="X">
+                    </div>
+                    <div class="orbital-node node-zero" data-target="zero" title="Zero">
+                        <img src="https://upload.wikimedia.org/wikipedia/pt/8/8d/Zero-mmx.png" alt="Zero">
+                    </div>
+                    <div class="orbital-node node-light" data-target="light" title="Dr. Light">
+                        <img src="https://cdn.staticneo.com/w/megaman/Dr._Light.jpg" alt="Dr Light">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Heroes Section -->
+    <section id="heroes" class="heroes-section">
+        <h2 class="section-title">Evolução de Combate</h2>
+        <div class="cards-grid">
+
+            <div class="hero-card" data-crest="x-buster">
+                <div class="card-inner">
+                    <div class="cyber-rank rank-blue">X1 ➔ X3</div>
+                    <h3>O Despertar de X</h3>
+                    <p class="partner">Era: SNES (16-bits)</p>
+                    <p class="description">X desperta de sua cápsula após 100 anos. O início da caçada contra Sigma,
+                        reunindo as partes da armadura de Dr. Light em um mundo em ruínas.</p>
+                    <div class="crest crest-blue">Armor Light</div>
+                </div>
+            </div>
+
+            <div class="hero-card" data-crest="z-saber">
+                <div class="card-inner">
+                    <div class="cyber-rank rank-red">X4</div>
+                    <h3>A Guerra Repliforce</h3>
+                    <p class="partner">Era: PlayStation 1 (32-bits)</p>
+                    <p class="description">Um divisor de águas na franquia. Zero torna-se totalmente jogável com sua
+                        letal Z-Saber, enfrentando uma trágica história de traição militar.</p>
+                    <div class="crest crest-red">Z-Saber</div>
+                </div>
+            </div>
+
+            <div class="hero-card" data-crest="falcon">
+                <div class="card-inner">
+                    <div class="cyber-rank rank-blue">X5</div>
+                    <h3>A Queda de Eurasia</h3>
+                    <p class="partner">Era: PlayStation 1</p>
+                    <p class="description">Uma corrida contra o tempo para impedir que a colônia espacial Eurasia
+                        destrua a Terra. O confronto definitivo entre ideais de X e Zero.</p>
+                    <div class="crest crest-blue">Falcon Armor</div>
+                </div>
+            </div>
+
+            <div class="hero-card" data-crest="shadow">
+                <div class="card-inner">
+                    <div class="cyber-rank rank-purple">X6</div>
+                    <h3>O Fenômeno Nightmare</h3>
+                    <p class="partner">Era: PlayStation 1</p>
+                    <p class="description">Com o sacrifício de Zero, X empunha a Z-Saber para combater o vírus
+                        Nightmare, introduzindo um sistema punitivo de resgate de Reploids.</p>
+                    <div class="crest crest-purple">Shadow Armor</div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- Detonado Section -->
+    <section id="detonado" class="detonado-section">
+        <h2 class="section-title">Detonado — Mega Man X1</h2>
+
+        <!-- Controls Panel -->
+        <div class="controls-panel">
+            <h3 class="controls-title"><span class="ctrl-icon">🎮</span> Controles</h3>
+            <div class="controls-grid">
+                <div class="ctrl-item"><span class="ctrl-key">Y</span><span class="ctrl-desc">X-Buster (segure para carregar e solte)</span></div>
+                <div class="ctrl-item"><span class="ctrl-key">B</span><span class="ctrl-desc">Pulo</span></div>
+                <div class="ctrl-item"><span class="ctrl-key">A</span><span class="ctrl-desc">Dash (após obter a Leg Part)</span></div>
+                <div class="ctrl-item"><span class="ctrl-key">R / L</span><span class="ctrl-desc">Troca de arma</span></div>
+                <div class="ctrl-item"><span class="ctrl-key">START</span><span class="ctrl-desc">Abre o Menu — troca armas, usa Sub-tanks e sai da fase</span></div>
+            </div>
+        </div>
+
+        <!-- Stage: Auto Estrada -->
+        <div class="stage-block intro-stage">
+            <div class="stage-header">
+                <span class="stage-badge badge-intro">Introdução</span>
+                <h3 class="stage-name">AUTO ESTRADA</h3>
+            </div>
+            <p class="stage-lore">Os inimigos não são muito perigosos — meta bala neles e siga em frente. Cuidado com as plataformas que desabam e com os robôs abelha (tiros carregados os eliminam rapidamente). No final você enfrentará <strong>Vile</strong>, mas não poderá vencê-lo. Zero chegará e o salvará.</p>
+            <div class="boss-card vile-preview">
+                <div class="boss-img-wrap">
+                    <img src="https://static.wikia.nocookie.net/megaman/images/a/a5/MMX_Vile.png/revision/latest?cb=20120714020741" alt="Vile" class="boss-img" onerror="this.src='https://static.wikia.nocookie.net/megaman/images/thumb/5/5c/Vile_MMXD.png/200px-Vile_MMXD.png'">
+                    <div class="boss-img-glow" style="--boss-color:#9d00ff"></div>
+                </div>
+                <div class="boss-info">
+                    <p class="boss-note">⚠️ Esta batalha não pode ser vencida. Aguarde Zero aparecer e salvá-lo.</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="order-tip">
+            <span class="tip-icon">💡</span>
+            <p>Agora você deve eliminar os oito chefes Mavericks. Siga a ordem abaixo para um aproveitamento otimizado de armas e itens.</p>
+        </div>
+
+        <!-- Stage: Montanha Nevada -->
+        <div class="stage-block">
+            <div class="stage-header">
+                <span class="stage-badge badge-snow">Fase 1</span>
+                <h3 class="stage-name">MONTANHA NEVADA</h3>
+            </div>
+            <p class="stage-lore">O maior perigo é na parte em que o chão desliza — você pode escorregar direto para o abismo. Os inimigos em geral não causam problemas. Você encontrará a única peça de armadura obrigatória do jogo nesta fase: a <strong>Leg Part</strong>.</p>
+            <div class="items-row">
+                <div class="item-chip"><span class="item-icon">🦵</span> <strong>Leg Part</strong> — Permite Dash (botão A ou duplo toque direcional) e saltos mais longos.</div>
+                <div class="item-chip"><span class="item-icon">❤️</span> <strong>Heart Tank</strong> — Precisa da Flame Wave de Flame Mammoth. Use-a no mecanismo azul após subir com o veículo.</div>
+            </div>
+            <div class="boss-card">
+                <div class="boss-img-wrap">
+                    <img src="https://static.wikia.nocookie.net/megaman/images/3/38/MMX-ChillPenguin.png/revision/latest?cb=20120817021543" alt="Chill Penguin" class="boss-img" onerror="this.src='https://static.wikia.nocookie.net/megaman/images/thumb/3/38/MMX-ChillPenguin.png/200px-MMX-ChillPenguin.png'">
+                    <div class="boss-img-glow" style="--boss-color:#00ccff"></div>
+                </div>
+                <div class="boss-info">
+                    <div class="boss-name-row">
+                        <h4 class="boss-name">Chill Penguin</h4>
+                        <span class="boss-weakness">Fraqueza: <em>Fire Wave 🔥</em></span>
+                    </div>
+                    <div class="attacks-list">
+                        <span class="attack-tag">Shotgun Ice</span>
+                        <span class="attack-tag">Body Slide</span>
+                        <span class="attack-tag">Snow Storm</span>
+                        <span class="attack-tag">Ice Statue</span>
+                    </div>
+                    <p class="strategy"><span class="strat-label">ESTRATÉGIA:</span> Fique pendurado na parede carregando o X-Buster. Quando ele usar o ataque de escorregão, caia e acerte-o. Repita até derrotá-lo. Se tiver a <em>Fire Wave</em>, use-a — é o ponto fraco. Recompensa: <strong>Shotgun Ice</strong>.</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Stage: Usina de Energia -->
+        <div class="stage-block">
+            <div class="stage-header">
+                <span class="stage-badge badge-electric">Fase 2</span>
+                <h3 class="stage-name">USINA DE ENERGIA</h3>
+            </div>
+            <p class="stage-lore">O maior problema é a escuridão em alguns pontos — preste atenção na posição dos inimigos para não cair em buracos.</p>
+            <div class="items-row">
+                <div class="item-chip"><span class="item-icon">🔋</span> <strong>Sub-Tank</strong> — Logo no início. Precisa da Boomerang Cutter para pegar. Pule e atire para alcançá-lo.</div>
+                <div class="item-chip"><span class="item-icon">❤️</span> <strong>Heart Tank</strong> — Um dos mais difíceis do jogo! Escale a parede até o alto, deslize um pouco e aperte pulo + dash ao mesmo tempo.</div>
+            </div>
+            <div class="boss-card sub-boss">
+                <div class="boss-img-wrap">
+                    <img src="https://static.wikia.nocookie.net/megaman/images/7/72/MMX_Thunder_Slimer.png/revision/latest?cb=20140323175614" alt="Thunder Slimer" class="boss-img" onerror="this.src='https://static.wikia.nocookie.net/megaman/images/thumb/7/72/MMX_Thunder_Slimer.png/200px-MMX_Thunder_Slimer.png'">
+                    <div class="boss-img-glow" style="--boss-color:#ffe000"></div>
+                </div>
+                <div class="boss-info">
+                    <div class="boss-name-row">
+                        <h4 class="boss-name">Thunder Slimer <span class="sub-tag">Sub-Chefe</span></h4>
+                    </div>
+                    <div class="attacks-list">
+                        <span class="attack-tag">Water Balls</span>
+                        <span class="attack-tag">Thunder Strike</span>
+                        <span class="attack-tag">Jump Up</span>
+                    </div>
+                    <p class="strategy"><span class="strat-label">ESTRATÉGIA:</span> Mande tiros carregados quando estiver no alto. Cuidado com as bolhas de água — não causam dano mas o imobilizam. Se já derrotou Storm Eagle, use <em>Storm Tornado</em> para facilitar.</p>
+                </div>
+            </div>
+            <div class="boss-card">
+                <div class="boss-img-wrap">
+                    <img src="https://static.wikia.nocookie.net/megaman/images/9/97/MMX-SparkMandrill.png/revision/latest?cb=20120817021654" alt="Spark Mandrill" class="boss-img" onerror="this.src='https://static.wikia.nocookie.net/megaman/images/thumb/9/97/MMX-SparkMandrill.png/200px-MMX-SparkMandrill.png'">
+                    <div class="boss-img-glow" style="--boss-color:#ffe000"></div>
+                </div>
+                <div class="boss-info">
+                    <div class="boss-name-row">
+                        <h4 class="boss-name">Spark Mandrill</h4>
+                        <span class="boss-weakness">Fraqueza: <em>Shotgun Ice ❄️</em></span>
+                    </div>
+                    <div class="attacks-list">
+                        <span class="attack-tag">Spark Shot</span>
+                        <span class="attack-tag">Roof Climb</span>
+                        <span class="attack-tag">Dashing Punch</span>
+                        <span class="attack-tag">Super Jump</span>
+                    </div>
+                    <p class="strategy"><span class="strat-label">ESTRATÉGIA:</span> Use <em>Shotgun Ice</em>. Atire e espere ele se libertar do gelo para atirar novamente. Repita até congelá-lo definitivamente. Recompensa: <strong>Spark Shot</strong>.</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Stage: Minas -->
+        <div class="stage-block">
+            <div class="stage-header">
+                <span class="stage-badge badge-earth">Fase 3</span>
+                <h3 class="stage-name">MINAS</h3>
+            </div>
+            <p class="stage-lore">Use o skate para avançar mais rápido, mas cuidado com os buracos. O rolo compressor é mortal — se te tocar é morte certa.</p>
+            <div class="items-row">
+                <div class="item-chip"><span class="item-icon">🔋</span> <strong>Sub-Tank</strong> — Antes do 1º rolo, deslize pela parede, deixe-o passar e pegue-o onde ele saiu.</div>
+                <div class="item-chip"><span class="item-icon">❤️</span> <strong>Heart Tank</strong> — No 2º rolo compressor. Entre na frente ou use Shotgun Ice carregada para criar plataforma de gelo.</div>
+                <div class="item-chip" style="border-color:rgba(255,42,85,0.5)"><span class="item-icon">☢️</span> <strong>Hadoken</strong> — Precisa de todos os sub-tanks, Heart Tanks e 4 armor parts. Visite o local 6 vezes. Execução: ↓↙←+ Y.</div>
+            </div>
+            <div class="boss-card">
+                <div class="boss-img-wrap">
+                    <img src="https://static.wikia.nocookie.net/megaman/images/b/b7/MMX-ArmoredArmadillo.png/revision/latest?cb=20120817021256" alt="Armored Armadillo" class="boss-img" onerror="this.src='https://static.wikia.nocookie.net/megaman/images/thumb/b/b7/MMX-ArmoredArmadillo.png/200px-MMX-ArmoredArmadillo.png'">
+                    <div class="boss-img-glow" style="--boss-color:#aaaaaa"></div>
+                </div>
+                <div class="boss-info">
+                    <div class="boss-name-row">
+                        <h4 class="boss-name">Armored Armadillo</h4>
+                        <span class="boss-weakness">Fraqueza: <em>Spark Shot ⚡</em></span>
+                    </div>
+                    <div class="attacks-list">
+                        <span class="attack-tag">Energy Shot</span>
+                        <span class="attack-tag">Rolling Shield</span>
+                        <span class="attack-tag">Deflect Raid</span>
+                    </div>
+                    <p class="strategy"><span class="strat-label">ESTRATÉGIA:</span> Acerte com <em>Spark Shot</em> para destruir a armadura, depois escale a parede. Quando ele ricocheteou, caia e acerte novamente. Use o dash para desviar se vier na sua direção. Recompensa: <strong>Rolling Shield</strong>.</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Stage: Oceano -->
+        <div class="stage-block">
+            <div class="stage-header">
+                <span class="stage-badge badge-water">Fase 4</span>
+                <h3 class="stage-name">OCEANO</h3>
+            </div>
+            <p class="stage-lore">Cuidado com os espinhos no chão, especialmente nas partes com o robô do jato de água. Para o Heart Tank, use o segundo redemoinho para alcançar a nave secreta e atire no olho verde.</p>
+            <div class="items-row">
+                <div class="item-chip"><span class="item-icon">❤️</span> <strong>Heart Tank</strong> — Use o 2º redemoinho para a nave secreta. Atire no olho verde, derrote o sub-chefe e pegue o Heart Tank no final.</div>
+            </div>
+            <div class="boss-card sub-boss">
+                <div class="boss-img-wrap">
+                    <img src="https://static.wikia.nocookie.net/megaman/images/4/49/X1Utoboros.png/revision/latest?cb=20151231070217" alt="Utobolus" class="boss-img" onerror="this.src='https://via.placeholder.com/150/001a33/00ccff?text=Utobolus'">
+                    <div class="boss-img-glow" style="--boss-color:#00ccff"></div>
+                </div>
+                <div class="boss-info">
+                    <div class="boss-name-row">
+                        <h4 class="boss-name">Utobolus <span class="sub-tag">Sub-Chefe (×2)</span></h4>
+                    </div>
+                    <div class="attacks-list">
+                        <span class="attack-tag">Nenhum ataque relevante</span>
+                    </div>
+                    <p class="strategy"><span class="strat-label">ESTRATÉGIA:</span> 1ª vez: fique no canto direito e atire na cabeça e na cauda. 2ª vez: plataforma superior esquerda. <em>Storm Tornado</em> dois tiros e já era.</p>
+                </div>
+            </div>
+            <div class="boss-card">
+                <div class="boss-img-wrap">
+                    <img src="https://static.wikia.nocookie.net/megaman/images/7/7f/MMX-LaunchOctopus.png/revision/latest?cb=20120817021413" alt="Launch Octopus" class="boss-img" onerror="this.src='https://static.wikia.nocookie.net/megaman/images/thumb/7/7f/MMX-LaunchOctopus.png/200px-MMX-LaunchOctopus.png'">
+                    <div class="boss-img-glow" style="--boss-color:#0055ff"></div>
+                </div>
+                <div class="boss-info">
+                    <div class="boss-name-row">
+                        <h4 class="boss-name">Launcher Octopus</h4>
+                        <span class="boss-weakness">Fraqueza: <em>Rolling Shield 🛡️</em></span>
+                    </div>
+                    <div class="attacks-list">
+                        <span class="attack-tag">Homing Torpedo</span>
+                        <span class="attack-tag">Spread Missile</span>
+                        <span class="attack-tag">Vortex</span>
+                    </div>
+                    <p class="strategy"><span class="strat-label">ESTRATÉGIA:</span> Use <em>Rolling Shield</em>. Luta pode ser complicada — chegue com os Sub-Tanks cheios. Atire sempre que possível e desvie o máximo. Recompensa: <strong>Homing Torpedo</strong>.</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Stage: Torre -->
+        <div class="stage-block">
+            <div class="stage-header">
+                <span class="stage-badge badge-electric">Fase 5</span>
+                <h3 class="stage-name">TORRE</h3>
+            </div>
+            <p class="stage-lore">Atenção na hora de subir no elevador (espinhos) e na torre vermelha (inimigos irritantes). O Heart Tank está no alto da torre vermelha, antes do chefe.</p>
+            <div class="items-row">
+                <div class="item-chip"><span class="item-icon">❤️</span> <strong>Heart Tank</strong> — Use Boomerang Cutter na distância certa, ou Shotgun Ice (carregada) + Weapon Part para criar skate de gelo e alcançá-lo.</div>
+            </div>
+            <div class="boss-card">
+                <div class="boss-img-wrap">
+                    <img src="https://static.wikia.nocookie.net/megaman/images/a/a3/MMX-BoomerKuwanger.png/revision/latest?cb=20120817021329" alt="Boomer Kuwanger" class="boss-img" onerror="this.src='https://static.wikia.nocookie.net/megaman/images/thumb/a/a3/MMX-BoomerKuwanger.png/200px-MMX-BoomerKuwanger.png'">
+                    <div class="boss-img-glow" style="--boss-color:#9d00ff"></div>
+                </div>
+                <div class="boss-info">
+                    <div class="boss-name-row">
+                        <h4 class="boss-name">Boomer Kuwanger</h4>
+                        <span class="boss-weakness">Fraqueza: <em>Homing Torpedo 🎯</em></span>
+                    </div>
+                    <div class="attacks-list">
+                        <span class="attack-tag">Boomerang Cutter</span>
+                        <span class="attack-tag">Teleport</span>
+                        <span class="attack-tag">Upper Launcher</span>
+                        <span class="attack-tag">Shadow Dash</span>
+                    </div>
+                    <p class="strategy"><span class="strat-label">ESTRATÉGIA:</span> Com <em>Homing Torpedo</em> é muito fácil. Atire uma vez e ele some, atire novamente ao reaparecer. Repita até eliminá-lo. Recompensa: <strong>Boomerang Cutter</strong>.</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Stage: Floresta -->
+        <div class="stage-block">
+            <div class="stage-header">
+                <span class="stage-badge badge-forest">Fase 6</span>
+                <h3 class="stage-name">FLORESTA</h3>
+            </div>
+            <p class="stage-lore">A fase mais fácil das oito. É só seguir em frente. Se Launcher Octopus já foi derrotado, a fase estará inundada — acesso à área secreta fica disponível.</p>
+            <div class="items-row">
+                <div class="item-chip"><span class="item-icon">❤️</span> <strong>Heart Tank</strong> — Precisa da Leg Part e ter derrotado Launcher Octopus. Deslize pela parede no 1º buraco e faça dash + salto para o lado oposto.</div>
+                <div class="item-chip"><span class="item-icon">🛡️</span> <strong>Body Part</strong> — No mesmo local do Heart Tank, vá para cima com dash + salto. Derrote o sub-chefe RT-55J para obter a Body Part (aumenta sua defesa).</div>
+            </div>
+            <div class="boss-card sub-boss">
+                <div class="boss-img-wrap">
+                    <img src="https://static.wikia.nocookie.net/megaman/images/5/50/X1RT55J.png/revision/latest?cb=20151231065621" alt="RT-55J" class="boss-img" onerror="this.src='https://via.placeholder.com/150/001a33/00ff88?text=RT-55J'">
+                    <div class="boss-img-glow" style="--boss-color:#00ff88"></div>
+                </div>
+                <div class="boss-info">
+                    <div class="boss-name-row">
+                        <h4 class="boss-name">RT-55J <span class="sub-tag">Sub-Chefe</span></h4>
+                    </div>
+                    <div class="attacks-list">
+                        <span class="attack-tag">Jump</span>
+                        <span class="attack-tag">Metal Claw</span>
+                    </div>
+                    <p class="strategy"><span class="strat-label">ESTRATÉGIA:</span> Fique sempre do lado oposto e mande tiros carregados na cabeça. Às vezes ataca com a garra, mas é fácil de desviar. Batalha fácil, porém demorada — ele é bem resistente.</p>
+                </div>
+            </div>
+            <div class="boss-card">
+                <div class="boss-img-wrap">
+                    <img src="https://static.wikia.nocookie.net/megaman/images/6/61/MMX-StingChameleon.png/revision/latest?cb=20120817021717" alt="Sting Chameleon" class="boss-img" onerror="this.src='https://static.wikia.nocookie.net/megaman/images/thumb/6/61/MMX-StingChameleon.png/200px-MMX-StingChameleon.png'">
+                    <div class="boss-img-glow" style="--boss-color:#00ff88"></div>
+                </div>
+                <div class="boss-info">
+                    <div class="boss-name-row">
+                        <h4 class="boss-name">Sting Chameleon</h4>
+                        <span class="boss-weakness">Fraqueza: <em>Boomerang Cutter 🪃</em></span>
+                    </div>
+                    <div class="attacks-list">
+                        <span class="attack-tag">Chameleon Sting</span>
+                        <span class="attack-tag">Spike Rain</span>
+                        <span class="attack-tag">Tongue Whip</span>
+                        <span class="attack-tag">Camouflage</span>
+                    </div>
+                    <p class="strategy"><span class="strat-label">ESTRATÉGIA:</span> Use <em>Boomerang Cutter</em>. Ele é perigoso — entre com ao menos 1 Sub-Tank cheio. Atire e ele se pendura no teto; mantenha a distância certa e continue atirando. Cuidado com os espinhos que caem. Recompensa: <strong>Chameleon Sting</strong>.</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Stage: Céus -->
+        <div class="stage-block">
+            <div class="stage-header">
+                <span class="stage-badge badge-sky">Fase 7</span>
+                <h3 class="stage-name">CÉUS</h3>
+            </div>
+            <p class="stage-lore">Robôs que te agarram e jogam no abismo aparecem nas plataformas móveis do início. Use <em>Chameleon Sting Carregada</em> para ficar invulnerável por alguns segundos.</p>
+            <div class="items-row">
+                <div class="item-chip"><span class="item-icon">❤️</span> <strong>Heart Tank</strong> — No início, nas plataformas móveis. Quando chegar no topo, faça dash + salto para a esquerda.</div>
+                <div class="item-chip"><span class="item-icon">🔋</span> <strong>Sub-Tank</strong> — Nas plataformas com lança-chamas. Suba na que dá pra alcançar, vá duas à esquerda e atire no vidro para acessar.</div>
+                <div class="item-chip"><span class="item-icon">⛑️</span> <strong>Head Part</strong> — Após descer pelo muro metálico, atire nos cilindros de gás até explodirem e siga em frente. Permite quebrar alguns tetos com cabeçada.</div>
+            </div>
+            <div class="boss-card">
+                <div class="boss-img-wrap">
+                    <img src="https://static.wikia.nocookie.net/megaman/images/c/c2/MMX-StormEagle.png/revision/latest?cb=20120817021728" alt="Storm Eagle" class="boss-img" onerror="this.src='https://static.wikia.nocookie.net/megaman/images/thumb/c/c2/MMX-StormEagle.png/200px-MMX-StormEagle.png'">
+                    <div class="boss-img-glow" style="--boss-color:#00ccff"></div>
+                </div>
+                <div class="boss-info">
+                    <div class="boss-name-row">
+                        <h4 class="boss-name">Storm Eagle</h4>
+                        <span class="boss-weakness">Fraqueza: <em>Chameleon Sting 🦎</em></span>
+                    </div>
+                    <div class="attacks-list">
+                        <span class="attack-tag">Storm Tornado</span>
+                        <span class="attack-tag">Eagle Dive</span>
+                        <span class="attack-tag">Cub Hatch</span>
+                        <span class="attack-tag">Wind Storm</span>
+                    </div>
+                    <p class="strategy"><span class="strat-label">ESTRATÉGIA:</span> Muito fácil! O ataque mais perigoso é o vôo rasante, mas dá pra desviar. Use <em>Chameleon Sting</em> (ponto fraco) ou X-Buster mesmo. Atire sem piedade até cortar as asas. Recompensa: <strong>Storm Tornado</strong>.</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Stage: Fábrica -->
+        <div class="stage-block">
+            <div class="stage-header">
+                <span class="stage-badge badge-factory">Fase 8</span>
+                <h3 class="stage-name">FÁBRICA</h3>
+            </div>
+            <p class="stage-lore">Fase fácil se Chill Penguin já foi derrotado. Siga em frente sem problemas.</p>
+            <div class="items-row">
+                <div class="item-chip"><span class="item-icon">❤️</span> <strong>Heart Tank</strong> — Debaixo do piso com lava. Só pegue após derrotar Chill Penguin — o piso estará apagado. Volte pela parte inferior.</div>
+                <div class="item-chip"><span class="item-icon">🔋</span> <strong>Sub-Tank</strong> — Área dos robôs operários. Suba pelas plataformas, pendue-se e quebre os blocos com Boomerang Cutter.</div>
+                <div class="item-chip"><span class="item-icon">🔫</span> <strong>Weapon Part</strong> — Precisa de Leg Part + Head Part. Use dash + salto para alcançar e quebrar blocos prateados no teto. Aumenta o poder do X-Buster e permite carregar outras armas.</div>
+            </div>
+            <div class="boss-card">
+                <div class="boss-img-wrap">
+                    <img src="https://static.wikia.nocookie.net/megaman/images/7/73/MMX-FlameMammoth.png/revision/latest?cb=20120817021355" alt="Flame Mammoth" class="boss-img" onerror="this.src='https://static.wikia.nocookie.net/megaman/images/thumb/7/73/MMX-FlameMammoth.png/200px-MMX-FlameMammoth.png'">
+                    <div class="boss-img-glow" style="--boss-color:#ff6600"></div>
+                </div>
+                <div class="boss-info">
+                    <div class="boss-name-row">
+                        <h4 class="boss-name">Flame Mammoth</h4>
+                        <span class="boss-weakness">Fraqueza: <em>Storm Tornado 🌪️</em></span>
+                    </div>
+                    <div class="attacks-list">
+                        <span class="attack-tag">Fire Shot</span>
+                        <span class="attack-tag">Quake Jump</span>
+                        <span class="attack-tag">Heat Oil</span>
+                        <span class="attack-tag">Mammoth Scream</span>
+                    </div>
+                    <p class="strategy"><span class="strat-label">ESTRATÉGIA:</span> Use <em>Storm Tornado</em>. Se seguiu a ordem do roteiro, nenhum de seus ataques será ameaça. Mande tornados até apagar o fogo definitivamente. Recompensa: <strong>Flame Wave</strong>.</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Sigma Fortress Divider -->
+        <div class="fortress-divider">
+            <div class="fortress-line"></div>
+            <span class="fortress-label">☠️ FORTALEZA DE SIGMA ☠️</span>
+            <div class="fortress-line"></div>
+        </div>
+
+        <!-- Sigma Fortress Part 1 -->
+        <div class="stage-block fortress-stage">
+            <div class="stage-header">
+                <span class="stage-badge badge-sigma">Fortaleza 1</span>
+                <h3 class="stage-name">FORTALEZA DE SIGMA — PARTE 1</h3>
+            </div>
+            <p class="stage-lore">Plataformas voadoras com robôs perturbadores — use <em>Rolling Shield</em> ou <em>Chameleon Sting</em> carregados. Vile aprisionou Zero... mas Zero se sacrifica para libertar você. Hora de partir para o confronto!</p>
+            <div class="boss-card">
+                <div class="boss-img-wrap">
+                    <img src="https://static.wikia.nocookie.net/megaman/images/a/a5/MMX_Vile.png/revision/latest?cb=20120714020741" alt="Vile" class="boss-img" onerror="this.src='https://via.placeholder.com/150/1a001a/9d00ff?text=Vile'">
+                    <div class="boss-img-glow" style="--boss-color:#9d00ff"></div>
+                </div>
+                <div class="boss-info">
+                    <div class="boss-name-row">
+                        <h4 class="boss-name">Vile</h4>
+                        <span class="boss-weakness">Fraqueza: <em>Rolling Shield 🛡️</em></span>
+                    </div>
+                    <div class="attacks-list">
+                        <span class="attack-tag">Napalm Bomb</span>
+                        <span class="attack-tag">Paralyze Shot</span>
+                        <span class="attack-tag">Dash Attack</span>
+                    </div>
+                    <p class="strategy"><span class="strat-label">ESTRATÉGIA:</span> Use <em>Rolling Shield</em> (ponto fraco). Pule por cima quando vier na sua direção. Quando disparar raios, passe por baixo ou pule. Reserve pelo menos 2 Sub-Tanks — a fase continua após esta luta. <em>Hadoken</em> também funciona, mas é difícil de executar aqui.</p>
+                </div>
+            </div>
+            <div class="boss-card">
+                <div class="boss-img-wrap">
+                    <img src="https://static.wikia.nocookie.net/megaman/images/4/4a/MHX_Bospider.png/revision/latest?cb=20130522193924" alt="Bospider" class="boss-img" onerror="this.src='https://via.placeholder.com/150/1a001a/9d00ff?text=Bospider'">
+                    <div class="boss-img-glow" style="--boss-color:#9d00ff"></div>
+                </div>
+                <div class="boss-info">
+                    <div class="boss-name-row">
+                        <h4 class="boss-name">Bospider</h4>
+                    </div>
+                    <div class="attacks-list">
+                        <span class="attack-tag">Spider Attack</span>
+                        <span class="attack-tag">Mini Spiders</span>
+                    </div>
+                    <p class="strategy"><span class="strat-label">ESTRATÉGIA:</span> Precisa de paciência. Use <em>X-Buster</em> — outras armas não são eficientes aqui. Ele sobe e desce pelas barras; quando chegar em baixo, acerte o olho com tiro carregado. Não fique no local onde ele vai descer. Elimine os filhotinhos rapidamente.</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Sigma Fortress Part 2 -->
+        <div class="stage-block fortress-stage">
+            <div class="stage-header">
+                <span class="stage-badge badge-sigma">Fortaleza 2</span>
+                <h3 class="stage-name">FORTALEZA DE SIGMA — PARTE 2</h3>
+            </div>
+            <p class="stage-lore">Siga derrotando: <em>Chill Penguin</em> (Flame Wave) → pegue o veículo → derrote tudo até a escada → escale a parede com Chameleon Sting → derrote <em>Storm Eagle</em> (Chameleon Sting).</p>
+            <div class="boss-card">
+                <div class="boss-img-wrap">
+                    <img src="https://static.wikia.nocookie.net/megaman/images/3/3d/MMX_Rangda_Bangda.png/revision/latest?cb=20120712174533" alt="Rangda Bangda" class="boss-img" onerror="this.src='https://via.placeholder.com/150/1a001a/ff2a55?text=Rangda'">
+                    <div class="boss-img-glow" style="--boss-color:#ff2a55"></div>
+                </div>
+                <div class="boss-info">
+                    <div class="boss-name-row">
+                        <h4 class="boss-name">Rangda Bangda</h4>
+                        <span class="boss-weakness">Melhor arma: <em>Homing Torpedo 🎯</em></span>
+                    </div>
+                    <div class="attacks-list">
+                        <span class="attack-tag">Blue Eye Attack</span>
+                        <span class="attack-tag">Red Eye Attack</span>
+                        <span class="attack-tag">Green Eye Attack</span>
+                        <span class="attack-tag">Core Attack</span>
+                    </div>
+                    <p class="strategy"><span class="strat-label">ESTRATÉGIA:</span> Duas esferas que mudam de cor e de ataque. Azul: avança em você. Verde: lança bolinhas de energia. Vermelha: as duas coisas. Quando as paredes fecham, acerte também o robô central. Cuidado com os espinhos. Use <em>Homing Torpedo</em> e um Sub-Tank se necessário.</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Sigma Fortress Part 3 -->
+        <div class="stage-block fortress-stage">
+            <div class="stage-header">
+                <span class="stage-badge badge-sigma">Fortaleza 3</span>
+                <h3 class="stage-name">FORTALEZA DE SIGMA — PARTE 3</h3>
+            </div>
+            <p class="stage-lore">Reencontre os mestres derrotados em sequência: Armored Armadillo (Spark Shot) → Sting Chameleon (Boomerang Cutter) → Spark Mandrill (Shotgun Ice ou Hadoken) → Launcher Octopus (Rolling Shield) → Flame Mammoth (Storm Tornado ou Hadoken).</p>
+            <div class="boss-card">
+                <div class="boss-img-wrap">
+                    <img src="https://static.wikia.nocookie.net/megaman/images/9/93/D-Rex.png/revision/latest?cb=20120712175052" alt="D-Rex" class="boss-img" onerror="this.src='https://via.placeholder.com/150/1a001a/ff2a55?text=D-Rex'">
+                    <div class="boss-img-glow" style="--boss-color:#ff2a55"></div>
+                </div>
+                <div class="boss-info">
+                    <div class="boss-name-row">
+                        <h4 class="boss-name">D-Rex</h4>
+                        <span class="boss-weakness">Melhor arma: <em>Boomerang Cutter 🪃</em></span>
+                    </div>
+                    <div class="attacks-list">
+                        <span class="attack-tag">Rex Smash</span>
+                        <span class="attack-tag">Plasma Blast</span>
+                    </div>
+                    <p class="strategy"><span class="strat-label">ESTRATÉGIA:</span> Ele é dividido em duas partes — acerte apenas a de cima (a de baixo é invencível). Quando vier para cima de você pode paralisar. Quando lançar o círculo de energia, fique no alto da parede. Use <em>Boomerang Cutter</em> e um Sub-Tank se necessário.</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Sigma Fortress Final -->
+        <div class="stage-block fortress-stage">
+            <div class="stage-header">
+                <span class="stage-badge badge-sigma">Final</span>
+                <h3 class="stage-name">FORTALEZA DE SIGMA — CONFRONTO FINAL</h3>
+            </div>
+            <p class="stage-lore">Suba a parede para enfrentar Sigma — mas primeiro ele manda seu bichinho de estimação te aquecer.</p>
+            <div class="multi-boss-row">
+                <div class="boss-card boss-card-narrow">
+                    <div class="boss-img-wrap">
+                        <img src="https://static.wikia.nocookie.net/megaman/images/c/c9/Velguarder.png/revision/latest?cb=20120712175141" alt="Velguarder" class="boss-img" onerror="this.src='https://via.placeholder.com/150/1a001a/ffe000?text=Velguarder'">
+                        <div class="boss-img-glow" style="--boss-color:#ffe000"></div>
+                    </div>
+                    <div class="boss-info">
+                        <div class="boss-name-row">
+                            <h4 class="boss-name">Velguarder</h4>
+                            <span class="boss-weakness">Fraqueza: <em>Shotgun Ice ❄️</em></span>
+                        </div>
+                        <div class="attacks-list">
+                            <span class="attack-tag">Leap Attack</span>
+                            <span class="attack-tag">Fire Breath</span>
+                            <span class="attack-tag">Ice Breath</span>
+                        </div>
+                        <p class="strategy"><span class="strat-label">ESTRATÉGIA:</span> Fique parado, espere ele saltar na parede e voltar, então mande um <em>Hadoken</em>. Sem Hadoken, use <em>Shotgun Ice</em> e economize Sub-Tanks para Sigma.</p>
+                    </div>
+                </div>
+                <div class="boss-card boss-card-narrow">
+                    <div class="boss-img-wrap">
+                        <img src="https://static.wikia.nocookie.net/megaman/images/f/f0/Sigma_X1.png/revision/latest?cb=20120713010244" alt="Sigma" class="boss-img" onerror="this.src='https://via.placeholder.com/150/1a001a/ff2a55?text=Sigma'">
+                        <div class="boss-img-glow" style="--boss-color:#ff2a55"></div>
+                    </div>
+                    <div class="boss-info">
+                        <div class="boss-name-row">
+                            <h4 class="boss-name">Sigma</h4>
+                            <span class="boss-weakness">Melhor arma: <em>Spark Shot ⚡</em></span>
+                        </div>
+                        <div class="attacks-list">
+                            <span class="attack-tag">Energy Wave</span>
+                            <span class="attack-tag">Sigma Strike</span>
+                        </div>
+                        <p class="strategy"><span class="strat-label">ESTRATÉGIA:</span> Comece com um <em>Hadoken</em> logo de cara para acabar rapidamente. Caso contrário, desvie da onda de energia e do ataque em zigue-zague. Use <em>Spark Shot</em> como arma principal.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="boss-card final-boss">
+                <div class="boss-img-wrap">
+                    <img src="https://static.wikia.nocookie.net/megaman/images/1/17/Sigma_Final_X1.png/revision/latest?cb=20120713010319" alt="Sigma Forma Final" class="boss-img" onerror="this.src='https://via.placeholder.com/150/1a001a/ff2a55?text=Sigma+Final'">
+                    <div class="boss-img-glow" style="--boss-color:#ff2a55"></div>
+                </div>
+                <div class="boss-info">
+                    <div class="boss-name-row">
+                        <h4 class="boss-name">Sigma — 2ª Forma 💀</h4>
+                        <span class="boss-weakness">Melhor arma: <em>Rolling Shield 🛡️</em></span>
+                    </div>
+                    <div class="attacks-list">
+                        <span class="attack-tag">Flame Thrower</span>
+                        <span class="attack-tag">Thunder Ball</span>
+                        <span class="attack-tag">Thunder Claw</span>
+                        <span class="attack-tag">Claw Attack</span>
+                    </div>
+                    <p class="strategy"><span class="strat-label">ESTRATÉGIA:</span> Fase mais difícil do jogo! O lança-chamas percorre todo o cenário — dá pra escapar. As bolas de eletricidade são mais difíceis de desviar. As mãos lançam raios — não fique embaixo delas. Quando baixarem, suba nelas e acerte a cabeça com <em>Rolling Shield</em>. Cuidado para não ser atingido no alto. Mesmo com todos os Sub-Tanks cheios, essa batalha é uma pedreira. Boa sorte!</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Ending Quote -->
+        <div class="ending-quote">
+            <blockquote>
+                "A guerra acabou por agora e a paz foi restaurada, mas aqueles que se sacrificaram pela vitória nunca retornarão. Exausto, X observa a destruição que ele ajudou a causar e pondera porquê ele escolheu lutar. Será que não havia outra maneira? Parado no abismo, a resposta parece escapar dele. Ele sabe que irá lutar contra os Mavericks novamente antes de encontrar sua resposta. Quanto tempo ele continuará lutando, quanto tempo essa dor irá durar? Talvez apenas a X-Buster em sua mão saiba com certeza."
+            </blockquote>
+            <span class="quote-source">— Mega Man X1, Final</span>
+        </div>
+
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2026 Mega Man X Evolution Archive - Landing Page Premium Concept.</p>
+    </footer>
+
+    <script src="assets/js/script.js"></script>
+</body>
+
+</html>
