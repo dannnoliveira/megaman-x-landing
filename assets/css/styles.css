@@ -883,6 +883,223 @@ h3,
     line-height: 1.4;
 }
 
+/* ─── Emulator Section ─────────────────────────────────── */
+.emulator-section {
+    background: rgba(0, 204, 255, 0.03);
+    border: 1px solid rgba(0, 204, 255, 0.18);
+    border-radius: 10px;
+    padding: 40px 50px;
+    margin-bottom: 50px;
+    box-shadow: 0 0 50px rgba(0, 204, 255, 0.05), inset 0 0 40px rgba(0, 0, 0, 0.2);
+}
+
+.emulator-copy {
+    margin-bottom: 28px;
+}
+
+.emulator-copy .stage-name {
+    margin-top: 12px;
+    margin-bottom: 10px;
+}
+
+/* ROM loader drop zone */
+.rom-loader {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 16px;
+}
+
+.rom-drop-zone {
+    width: 100%;
+    max-width: 600px;
+    border: 2px dashed rgba(0, 204, 255, 0.35);
+    border-radius: 12px;
+    background: rgba(0, 204, 255, 0.04);
+    transition: border-color 0.3s, background 0.3s, box-shadow 0.3s;
+    cursor: pointer;
+}
+
+.rom-drop-zone.drag-over {
+    border-color: var(--primary-blue);
+    background: rgba(0, 204, 255, 0.10);
+    box-shadow: 0 0 30px rgba(0, 204, 255, 0.25);
+}
+
+.rom-drop-inner {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    padding: 48px 32px;
+    text-align: center;
+}
+
+.rom-icon {
+    font-size: 3rem;
+    animation: bossGlowPulse 2.5s infinite alternate;
+}
+
+.rom-title {
+    font-family: 'Orbitron', sans-serif;
+    font-size: 1.2rem;
+    font-weight: 700;
+    color: #fff;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    margin: 0;
+}
+
+.rom-sub {
+    font-size: 0.9rem;
+    color: var(--text-muted);
+    margin: 0;
+}
+
+.rom-formats {
+    font-size: 0.82rem;
+    color: rgba(0, 204, 255, 0.65);
+    margin: 0;
+}
+
+.rom-formats code {
+    background: rgba(0, 204, 255, 0.12);
+    padding: 2px 8px;
+    border-radius: 4px;
+    font-family: 'Orbitron', monospace;
+    font-size: 0.78rem;
+    letter-spacing: 1px;
+}
+
+/* Emulator shell */
+.emulator-shell {
+    width: 100%;
+}
+
+.emulator-toolbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 12px;
+    background: rgba(0, 0, 0, 0.5);
+    border: 1px solid rgba(0, 204, 255, 0.2);
+    border-bottom: none;
+    border-radius: 8px 8px 0 0;
+    padding: 12px 20px;
+}
+
+.emu-status {
+    font-family: 'Orbitron', sans-serif;
+    font-size: 0.78rem;
+    color: var(--primary-blue);
+    letter-spacing: 1.5px;
+    text-shadow: 0 0 8px var(--primary-glow);
+}
+
+.emu-toolbar-btns {
+    display: flex;
+    gap: 10px;
+}
+
+.emu-btn {
+    font-family: 'Orbitron', sans-serif;
+    font-size: 0.72rem;
+    font-weight: 700;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    padding: 7px 16px;
+    border-radius: 4px;
+    border: 1px solid rgba(0, 204, 255, 0.4);
+    background: rgba(0, 204, 255, 0.08);
+    color: var(--primary-blue);
+    cursor: pointer;
+    transition: background 0.25s, box-shadow 0.25s, transform 0.15s;
+}
+
+.emu-btn:hover {
+    background: rgba(0, 204, 255, 0.2);
+    box-shadow: 0 0 14px rgba(0, 204, 255, 0.35);
+    transform: translateY(-1px);
+}
+
+.emu-btn-danger {
+    border-color: rgba(255, 42, 85, 0.4);
+    background: rgba(255, 42, 85, 0.08);
+    color: var(--secondary-red);
+}
+
+.emu-btn-danger:hover {
+    background: rgba(255, 42, 85, 0.2);
+    box-shadow: 0 0 14px rgba(255, 42, 85, 0.35);
+}
+
+#game-container {
+    border: 1px solid rgba(0, 204, 255, 0.2);
+    border-top: none;
+    border-radius: 0 0 8px 8px;
+    overflow: hidden;
+    background: #000;
+    min-height: 460px;
+}
+
+/* Keyboard map */
+.emu-keymap {
+    margin-top: 28px;
+    background: rgba(0, 0, 0, 0.35);
+    border: 1px solid rgba(255, 255, 255, 0.07);
+    border-radius: 8px;
+    padding: 24px 32px;
+}
+
+.emu-keymap-title {
+    font-family: 'Orbitron', sans-serif;
+    font-size: 0.9rem;
+    font-weight: 700;
+    color: var(--primary-blue);
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    margin-bottom: 18px;
+    text-shadow: 0 0 8px var(--primary-glow);
+}
+
+.emu-keymap-grid {
+    display: grid;
+    grid-template-columns: auto 1fr;
+    gap: 10px 20px;
+    align-items: center;
+}
+
+.emu-key {
+    font-family: 'Orbitron', sans-serif;
+    font-size: 0.75rem;
+    font-weight: 700;
+    background: linear-gradient(135deg, rgba(0, 204, 255, 0.2), rgba(0, 80, 200, 0.3));
+    border: 1px solid rgba(0, 204, 255, 0.35);
+    border-radius: 4px;
+    padding: 5px 12px;
+    color: #fff;
+    text-align: center;
+    white-space: nowrap;
+    box-shadow: 0 0 8px rgba(0, 204, 255, 0.2);
+}
+
+.emu-key-desc {
+    font-size: 0.88rem;
+    color: var(--text-muted);
+}
+
+/* Note text */
+.emulator-note {
+    font-size: 0.85rem;
+    color: rgba(255, 220, 100, 0.65);
+    text-align: center;
+    margin-top: 8px;
+    line-height: 1.6;
+}
+
+/* ─────────────────────────────────────────────────────── */
+
 /* Order Tip */
 .order-tip {
     display: flex;
