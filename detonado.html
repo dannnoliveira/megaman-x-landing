@@ -45,11 +45,13 @@
                 <div class="emulator-toolbar">
                     <span class="emu-status" id="emu-status">⚡ Mega Man X — Iniciando sistema…</span>
                     <div class="emu-toolbar-btns">
+                        <button class="emu-btn" id="emu-upload" title="Carregar ROM externa">📁 Abrir ROM</button>
                         <button class="emu-btn" id="emu-reset" title="Reiniciar">↺ Reset</button>
                         <button class="emu-btn" id="emu-fullscreen" title="Tela cheia">⛶ Fullscreen</button>
                     </div>
                 </div>
                 <div id="game-container" style="width:100%; max-width:800px; margin:0 auto;"></div>
+                <input type="file" id="rom-upload" accept=".zip,.sfc,.smc" style="display:none;">
             </div>
 
             <!-- Keyboard map -->
@@ -85,6 +87,41 @@
         <script src="https://cdn.emulatorjs.org/stable/data/loader.js" async></script>
         <script>
         (function(){
+            const statusEl = document.getElementById('emu-status');
+            const romUpload = document.getElementById('rom-upload');
+            const emuUploadBtn = document.getElementById('emu-upload');
+
+            emuUploadBtn.addEventListener('click', () => romUpload.click());
+
+            romUpload.addEventListener('change', function(e) {
+                const file = e.target.files[0];
+                if (file) {
+                    const romUrl = URL.createObjectURL(file);
+                    statusEl.textContent = `⚡ Carregando: ${file.name}…`;
+                    
+                    // Atualiza a URL e reinicia
+                    window.EJS_gameUrl = romUrl;
+                    
+                    // Para reiniciar o EmulatorJS, o método mais limpo é limpar o container 
+                    // e forçar a reinicialização do loader se possível, ou recarregar as configurações.
+                    const container = document.getElementById('game-container');
+                    container.innerHTML = '';
+                    
+                    // Recriar o script do loader para forçar nova execução
+                    const oldLoader = document.querySelector('script[src*="emulatorjs"]');
+                    if (oldLoader) oldLoader.remove();
+                    
+                    const newLoader = document.createElement('script');
+                    newLoader.src = "https://cdn.emulatorjs.org/stable/data/loader.js";
+                    newLoader.async = true;
+                    document.body.appendChild(newLoader);
+
+                    window.EJS_onGameStart = function() {
+                        statusEl.textContent = `✅ ${file.name.replace(/\.[^/.]+$/, "")} — Rodando!`;
+                    };
+                }
+            });
+
             document.getElementById('emu-reset').addEventListener('click', function() {
                 if (window.EJS_emulator) window.EJS_emulator.restart();
             });

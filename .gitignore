@@ -24,11 +24,4 @@ npm-debug.log*
 # Build output (não aplicável, mas bom ter)
 dist/
 build/
-
-# ROMs (arquivos protegidos por copyright — nunca commitar)
 assets/ROM/
-*.zip
-*.sfc
-*.smc
-*.nes
-*.gba
