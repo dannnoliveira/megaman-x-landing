@@ -1,0 +1,33 @@
+.x5-page { --x5-blue: #2456b6; --x5-red: #bd2638; --x5-gold: #f1c44d; }
+.x5-page .detonado-intro { background-color: #12182a; }
+.x5-page .x5-stage .boss-img-wrap,
+.x5-maverick-carousel .file-art { aspect-ratio: 1; padding: 0; background: var(--stage-tint, var(--portrait-color)); }
+.x5-page .x5-stage .boss-img,
+.x5-maverick-carousel .file-art img { width: 100%; height: 100%; max-width: none; max-height: none; object-fit: contain; object-position: center bottom; transform: none !important; filter: none; }
+.x5-maverick-carousel .file-art::before,
+.x5-maverick-carousel .file-art::after { display: none; }
+.x5-maverick-carousel .file-reveal { background: rgba(13,18,31,.95); }
+.x5-page .x5-alert { margin: 24px 0; padding: 18px 22px; border-left: 5px solid var(--x5-gold); background: #22293a; color: #e5e9f3; }
+.x5-page .x5-alert strong { color: var(--x5-gold); }
+.x5-page .x5-route-selector { aspect-ratio: 702 / 435; padding: 5px; background: #173f28 url('../img/x5/final/player-select-hd.png') center/100% 100% no-repeat; image-rendering: auto; }
+.x5-page .x5-route-selector::after { display: none; }
+.x5-page .x5-route-selector button { height: auto; background: rgba(4, 10, 18, .28); box-shadow: inset 0 0 0 2px transparent; }
+.x5-page .x5-route-selector button[data-x4-route="x"].is-active { background: rgba(10, 69, 173, .04); box-shadow: inset 0 0 0 3px #78dbff, inset 0 0 52px rgba(36, 165, 255, .32), 0 0 30px rgba(59, 179, 255, .9); }
+.x5-page .x5-route-selector button[data-x4-route="zero"].is-active { background: rgba(152, 16, 43, .04); box-shadow: inset 0 0 0 3px #ff92a3, inset 0 0 52px rgba(255, 39, 74, .34), 0 0 30px rgba(255, 52, 85, .9); }
+.x5-page .x5-route-note article { grid-template-columns: 110px 1fr; min-height: 110px; }
+.x5-page .x5-final-grid article { overflow: hidden; }
+.x5-page .x5-final-art { display: grid; place-items: center; height: 280px; margin: -20px -20px 16px; background: linear-gradient(145deg, #252d47, #101522); overflow: hidden; }
+.x5-page .x5-final-art img { display: block; width: 100%; height: 100%; object-fit: contain; }
+.x5-page .x5-final-art--dynamo { background: linear-gradient(145deg, #d5bd73, #88bfc8); }
+.x5-page .x5-final-art--dynamo img { padding: 10px; mix-blend-mode: multiply; }
+.x5-page .x5-final-art--scene img,
+.x5-page .x5-final-art--versus img { object-fit: cover; }
+.x5-page .x5-final-art--sigma { background: #e9ebec; }
+.x5-page .x5-final-art--sigma img { object-fit: cover; object-position: center top; }
+.x5-page .x5-final-art--secrets { grid-template-columns: repeat(2, 1fr); gap: 1px; padding: 22px; background: linear-gradient(145deg, #26365c, #111725); }
+.x5-page .x5-final-art--secrets span { display: grid; place-items: center; align-self: stretch; border: 1px solid rgba(255,255,255,.18); color: #f2ca62; font: 700 13px/1 'Barlow Condensed', sans-serif; letter-spacing: 0; }
+@media (max-width:700px) {
+    .x5-page .x5-route-selector button { height: auto; }
+    .x5-page .x5-final-art { height: 220px; }
+    .x5-page .x5-final-art img { height: 100%; }
+}

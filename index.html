@@ -1,156 +1,266 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="pt-BR">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mega Man X - Maverick Hunter Base</title>
-    <meta name="description" content="Arquivo de evolução de Mega Man X1 a X6.">
-
-    <!-- Google Fonts for digital aesthetics -->
-    <link
-        href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&family=Inter:wght@300;400;600&display=swap"
-        rel="stylesheet">
-
-    <link rel="stylesheet" href="assets/css/styles.css">
+    <title>Base Hunter X | Central Maverick Hunter</title>
+    <meta name="description" content="Central de inteligência dos Maverick Hunters: arquivos, missões e evolução de Mega Man X.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@500;600;700&family=DM+Serif+Display&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="assets/css/styles.css?v=x3-1">
+    <link rel="stylesheet" href="assets/css/home.css">
+    <link rel="stylesheet" href="assets/css/x3.css">
+    <link rel="stylesheet" href="assets/css/x4.css?v=x4-1">
+    <link rel="stylesheet" href="assets/css/x5.css?v=x5-1">
+    <link rel="stylesheet" href="assets/css/x6.css?v=x6-1">
 </head>
+<body class="home-page">
+    <a class="skip-link" href="#main-content">Pular para o conteúdo principal</a>
 
-<body>
-    <div id="particles-container"></div>
-
-    <!-- Navbar -->
-    <nav class="navbar">
-        <a href="#home" class="logo">
-            MEGA MAN <span class="x-red">X</span>
+    <nav class="navbar home-nav" aria-label="Navegação principal">
+        <a href="#home" class="logo" aria-label="Base Hunter X - início">
+            <span class="logo-mark" aria-hidden="true"><img src="assets/img/base-hunter-x-logo.png" alt=""></span>
         </a>
         <ul class="nav-links">
-            <li><a href="#home">Base Hunter</a></li>
-            <li><a href="#about">A Rebelião</a></li>
-            <li><a href="#heroes">Evolução (X1-X6)</a></li>
-            <li><a href="detonado.html">Detonado X1</a></li>
+            <li><a href="#base">A Base</a></li>
+            <li><a href="#missoes">Missões</a></li>
+            <li><a href="#arquivos">Arquivos</a></li>
         </ul>
-        <button class="digi-btn btn-small">Conectar Sistema</button>
+        <details class="detonado-menu">
+            <summary>Detonado</summary>
+            <nav aria-label="Escolher detonado">
+                <a href="detonado.html">Mega Man X1</a>
+                <a href="detonado-x2.html">Mega Man X2</a>
+                <a href="detonado-x3.html">Mega Man X3</a>
+                <a href="detonado-x4.html">Mega Man X4</a><a href="detonado-x5.html">Mega Man X5</a><a href="detonado-x6.html">Mega Man X6</a>
+            </nav>
+        </details>
     </nav>
 
-    <!-- Hero Section -->
-    <header id="home" class="hero">
-        <div class="hero-content">
-            <h1 class="glitch" data-text="Maverick Hunter Base">Maverick Hunter Base</h1>
-            <p>Ano 21XX. Os Mavericks iniciaram sua rebelião. Junte-se a X e Zero na luta para proteger a humanidade e o
-                futuro dos Reploids, desde o despertar até a ameaça Nightmare.</p>
-            <button class="digi-btn pulse">Iniciar Missão</button>
-        </div>
-        <div class="hero-visual">
-            <div class="digivice-glow x-buster-glow">
-                <div class="x-core"></div>
+    <main id="main-content" tabindex="-1">
+        <header id="home" class="home-hero">
+            <div class="hero-media" aria-hidden="true">
+                <img class="hero-character hero-character-full" src="assets/img/hunter-team-background.webp" alt="">
+                <div class="hero-grid"></div>
             </div>
-        </div>
-    </header>
+            <div class="hero-logo-wrap">
+                <p class="eyebrow">CENTRAL DE COMANDO // ANO 21XX</p>
+                <img class="hero-logo" src="assets/img/base-hunter-x-logo.png" alt="Base Hunter X">
+            </div>
+            <div class="hero-copy">
+                <h1>A caçada começa aqui.</h1>
+                <p>Entre na linha de frente, consulte os arquivos da Rebelião Maverick e acompanhe a evolução de X através de seis operações decisivas.</p>
+            </div>
+            <a class="mission-callout" href="#missoes">
+                <span class="mission-kicker">PROTOCOLO ATIVO</span>
+                <strong>Iniciar missão</strong>
+                <span class="mission-arrow" aria-hidden="true">↓</span>
+            </a>
+        </header>
 
-    <!-- About Section -->
-    <section id="about" class="about-section">
-        <h2 class="section-title">Alerta Maverick</h2>
-        <div class="glass-card">
-            <p>O ex-comandante <strong>Sigma</strong> declarou guerra à humanidade. Com o vírus Maverick se espalhando,
-                cabe aos <em>Maverick Hunters</em> investigar as anomalias e restaurar a paz. Mas a cada geração, a
-                ameaça evolui e se torna mais apocalíptica.</p>
-        </div>
-    </section>
+        <section id="base" class="base-intro section-band">
+            <div class="section-heading">
+                <p class="eyebrow">A BASE</p>
+                <h2>O último centro de resistência da humanidade.</h2>
+            </div>
+            <div class="intro-copy">
+                <p class="intro-lead">Quando Sigma declarou guerra, a Base Hunter se tornou o ponto de encontro entre inteligência, estratégia e combate.</p>
+                <p>Este arquivo acompanha X, Zero e os Hunters através das crises que definiram a Era 21XX. Cada operação registra armaduras, ameaças e decisões que mudaram o destino dos Reploids.</p>
+                <a class="text-link" href="#arquivos">Explorar os arquivos <span aria-hidden="true">→</span></a>
+            </div>
+        </section>
 
-    <!-- Lore Interactive Section -->
-    <section id="lore" class="lore-section">
-        <h2 class="section-title">Arquivos da Base Central</h2>
-        <div class="lore-container">
-            <div class="lore-text-panel" id="lore-display">
-                <h3 id="lore-title">Selecione um Arquivo</h3>
-                <p id="lore-content">Acesse os terminais no holograma da cápsula interativa para decodificar os dados
-                    históricos sobre os heróis e fundadores da Era 21XX.</p>
+        <section class="hunter-roster" aria-label="Formação principal">
+            <article class="roster-item roster-x">
+                <span class="roster-number">01</span>
+                <div><p class="roster-role">HUNTER CLASSE S</p><h3>X</h3></div>
+                <p>Potencial ilimitado, consciência e a esperança de uma paz duradoura.</p>
+            </article>
+            <article class="roster-item roster-zero">
+                <span class="roster-number">02</span>
+                <div><p class="roster-role">HUNTER CLASSE SA</p><h3>ZERO</h3></div>
+                <p>Precisão absoluta com a Z-Saber e lealdade forjada em batalha.</p>
+            </article>
+            <article class="roster-item roster-base">
+                <span class="roster-number">03</span>
+                <div><p class="roster-role">SUPORTE TÁTICO</p><h3>BASE</h3></div>
+                <p>Dados, coordenação e suporte para cada missão em território hostil.</p>
+            </article>
+        </section>
+
+        <section id="missoes" class="missions section-band">
+            <div class="missions-title">
+                <p class="eyebrow">LINHA DE OPERAÇÕES</p>
+                <h2>Seis crises.<br>Uma guerra em evolução.</h2>
+                <p>Do despertar de X ao fenômeno Nightmare, acompanhe os pontos de ruptura da saga.</p>
+            </div>
+            <div class="mission-list">
+                <article class="mission-row"><span class="mission-index">X1—X3</span><h3>O despertar</h3><p>As primeiras revoltas, o legado de Dr. Light e o surgimento de uma nova geração de Hunters.</p></article>
+                <article class="mission-row"><span class="mission-index">X4</span><h3>Repliforce</h3><p>Uma guerra trágica divide aliados e transforma Zero em protagonista da operação.</p></article>
+                <article class="mission-row"><span class="mission-index">X5</span><h3>Eurasia</h3><p>A colônia entra em rota de colisão e coloca o futuro da Terra contra o relógio.</p></article>
+                <article class="mission-row"><span class="mission-index">X6</span><h3>Nightmare</h3><p>Em um mundo devastado, X enfrenta anomalias que distorcem memória e realidade.</p></article>
+            </div>
+        </section>
+
+        <section id="arquivos" class="featured-files">
+            <div class="files-header">
+                <div><p class="eyebrow">BANCO DE DADOS MAVERICK</p><h2>Ameaças identificadas</h2></div>
+                <p>Deslize pela linha de alvos. Posicione o cursor ou use o teclado para revelar os dados de cada operação.</p>
             </div>
 
-            <div class="interactive-illustration">
-                <!-- Dr. Light Hologram Capsule Structure -->
-                <div class="hologram-capsule">
-                    <div class="capsule-base"></div>
-                    <div class="capsule-light"></div>
-                    <div class="capsule-rings"></div>
+            <div class="carousel-controls" aria-label="Controles da galeria Maverick">
+                <p><span id="maverick-position">01</span> / 08</p>
+                <div>
+                    <button class="carousel-button" type="button" data-carousel-direction="prev" aria-label="Ver Maverick anterior">←</button>
+                    <button class="carousel-button" type="button" data-carousel-direction="next" aria-label="Ver próximo Maverick">→</button>
+                </div>
+            </div>
 
-                    <img id="active-character-img"
-                        src="https://static.wikia.nocookie.net/murderseries/images/a/a5/X.png/revision/latest?cb=20150312040005"
-                        alt="Personagem Holográfico" class="hologram-char-img">
-
-                    <!-- Interactive Nodes -->
-                    <div class="orbital-node node-x" data-target="x" title="Mega Man X">
-                        <img src="https://static.wikia.nocookie.net/murderseries/images/a/a5/X.png/revision/latest?cb=20150312040005"
-                            alt="X">
+            <div class="maverick-carousel" id="maverick-carousel" aria-label="Galeria horizontal dos Mavericks de Mega Man X">
+                <article class="file-item file-ice" tabindex="0">
+                    <div class="file-art">
+                        <img src="assets/img/mavericks-clean/Chill-Peguin.png" alt="Chill Penguin">
+                        <div class="file-reveal"><p class="file-location">ÁREA // BASE ÁRTICA</p><p>Especialista em guerra glacial. Congela o terreno e usa rajadas de gelo para limitar a movimentação dos Hunters.</p></div>
                     </div>
-                    <div class="orbital-node node-zero" data-target="zero" title="Zero">
-                        <img src="https://upload.wikimedia.org/wikipedia/pt/8/8d/Zero-mmx.png" alt="Zero">
+                    <p class="file-code">MHX // 01</p><h3>Chill Penguin</h3><p>Unidade de controle climático.</p>
+                </article>
+                <article class="file-item file-electric" tabindex="0">
+                    <div class="file-art">
+                        <img src="assets/img/mavericks-clean/SparkMandrill.png" alt="Spark Mandrill">
+                        <div class="file-reveal"><p class="file-location">ÁREA // USINA DE ENERGIA</p><p>Combatente pesado energizado. Usa descargas elétricas e força bruta nos corredores da central.</p></div>
                     </div>
-                    <div class="orbital-node node-light" data-target="light" title="Dr. Light">
-                        <img src="https://cdn.staticneo.com/w/megaman/Dr._Light.jpg" alt="Dr Light">
+                    <p class="file-code">MHX // 02</p><h3>Spark Mandrill</h3><p>Sabotagem da rede elétrica.</p>
+                </article>
+                <article class="file-item file-gold" tabindex="0">
+                    <div class="file-art">
+                        <img src="assets/img/mavericks-clean/ArmoredArmadillo.png" alt="Armored Armadillo">
+                        <div class="file-reveal"><p class="file-location">ÁREA // MINA SUBTERRÂNEA</p><p>Guardião blindado dos recursos minerais. Rebate disparos e transforma a própria armadura em ataque giratório.</p></div>
                     </div>
+                    <p class="file-code">MHX // 03</p><h3>Armored Armadillo</h3><p>Defesa e extração mineral.</p>
+                </article>
+                <article class="file-item file-aqua" tabindex="0">
+                    <div class="file-art">
+                        <img src="assets/img/mavericks-clean/LauncheOctopus.png" alt="Launch Octopus">
+                        <div class="file-reveal"><p class="file-location">ÁREA // BASE OCEÂNICA</p><p>Especialista naval equipado com tentáculos, torpedos e mísseis teleguiados para combate subaquático.</p></div>
+                    </div>
+                    <p class="file-code">MHX // 04</p><h3>Launch Octopus</h3><p>Domínio das rotas marítimas.</p>
+                </article>
+                <article class="file-item file-orange" tabindex="0">
+                    <div class="file-art">
+                        <img src="assets/img/mavericks-clean/Boomer Kuwanger.png" alt="Boomer Kuwanger">
+                        <div class="file-reveal"><p class="file-location">ÁREA // TORRE CENTRAL</p><p>Assassino de alta velocidade. Teleporta-se pelo campo e ataca com o cortador removível de sua cabeça.</p></div>
+                    </div>
+                    <p class="file-code">MHX // 05</p><h3>Boomer Kuwanger</h3><p>Infiltração e defesa vertical.</p>
+                </article>
+                <article class="file-item file-forest" tabindex="0">
+                    <div class="file-art">
+                        <img src="assets/img/mavericks-clean/Sting-Chameleon.png" alt="Sting Chameleon">
+                        <div class="file-reveal"><p class="file-location">ÁREA // FLORESTA DE AÇO</p><p>Unidade de reconhecimento furtivo. Usa camuflagem óptica, língua extensível e espinhos lançados do teto.</p></div>
+                    </div>
+                    <p class="file-code">MHX // 06</p><h3>Sting Chameleon</h3><p>Camuflagem e emboscada.</p>
+                </article>
+                <article class="file-item file-blue" tabindex="0">
+                    <div class="file-art">
+                        <img src="assets/img/mavericks-clean/StormEagle.png" alt="Storm Eagle">
+                        <div class="file-reveal"><p class="file-location">ÁREA // AEROPORTO</p><p>Comandante aéreo capaz de criar tornados e dominar o espaço com mergulhos de alta precisão.</p></div>
+                    </div>
+                    <p class="file-code">MHX // 07</p><h3>Storm Eagle</h3><p>Supremacia aérea Maverick.</p>
+                </article>
+                <article class="file-item file-red" tabindex="0">
+                    <div class="file-art">
+                        <img src="assets/img/mavericks-clean/FlameMammoth.png" alt="Flame Mammoth">
+                        <div class="file-reveal"><p class="file-location">ÁREA // FÁBRICA DE METAIS</p><p>Unidade industrial de enorme força. Espalha óleo e fogo para transformar a linha de produção em uma armadilha.</p></div>
+                    </div>
+                    <p class="file-code">MHX // 08</p><h3>Flame Mammoth</h3><p>Controle da produção bélica.</p>
+                </article>
+            </div>
+        </section>
+
+        <section class="mavericks-section" aria-labelledby="mavericks-x2-title">
+            <div class="section-heading"><p class="eyebrow">ARQUIVO X2</p><h2 id="mavericks-x2-title">Novos Mavericks catalogados</h2><p>Consulte os chefes da segunda operação e abra cada ficha para ver a área e o padrão de combate.</p></div>
+            <div class="carousel-controls" aria-label="Controles da galeria Maverick X2">
+                <p><span id="maverick-x2-position">01</span> / 08</p>
+                <div>
+                    <button class="carousel-button" type="button" data-carousel-target="maverick-x2-carousel" data-carousel-direction="prev" aria-controls="maverick-x2-carousel" aria-label="Ver Maverick X2 anterior">←</button>
+                    <button class="carousel-button" type="button" data-carousel-target="maverick-x2-carousel" data-carousel-direction="next" aria-controls="maverick-x2-carousel" aria-label="Ver próximo Maverick X2">→</button>
                 </div>
             </div>
-        </div>
-    </section>
-
-    <!-- Heroes Section -->
-    <section id="heroes" class="heroes-section">
-        <h2 class="section-title">Evolução de Combate</h2>
-        <div class="cards-grid">
-
-            <div class="hero-card" data-crest="x-buster">
-                <div class="card-inner">
-                    <div class="cyber-rank rank-blue">X1 ➔ X3</div>
-                    <h3>O Despertar de X</h3>
-                    <p class="partner">Era: SNES (16-bits)</p>
-                    <p class="description">X desperta de sua cápsula após 100 anos. O início da caçada contra Sigma,
-                        reunindo as partes da armadura de Dr. Light em um mundo em ruínas.</p>
-                    <div class="crest crest-blue">Armor Light</div>
-                </div>
+            <div class="maverick-carousel x2-maverick-carousel" id="maverick-x2-carousel" aria-label="Galeria horizontal dos Mavericks de Mega Man X2">
+                <article class="file-item file-forest" tabindex="0"><div class="file-art"><img src="assets/img/x2/bosses/reference/wire-sponge.png" alt="Wire Sponge"><div class="file-reveal"><p class="file-location">ÁREA // CENTRO METEOROLÓGICO</p><p>Manipula vinhas, chuva e descargas elétricas em uma arena vertical.</p></div></div><p class="file-code">MHX2 // 01</p><h3>Wire Sponge</h3><p>Caos climático vegetal.</p></article>
+                <article class="file-item file-gold" tabindex="0"><div class="file-art"><img src="assets/img/x2/bosses/reference/wheel-gator.png" alt="Wheel Gator"><div class="file-reveal"><p class="file-location">ÁREA // TANQUE DINOSSAURO</p><p>Some no óleo, lança rodas serrilhadas e transforma o piso em uma armadilha.</p></div></div><p class="file-code">MHX2 // 02</p><h3>Wheel Gator</h3><p>Predador blindado.</p></article>
+                <article class="file-item file-aqua" tabindex="0"><div class="file-art"><img src="assets/img/x2/bosses/reference/bubble-crab.png" alt="Bubble Crab"><div class="file-reveal"><p class="file-location">ÁREA // BASE SUBMARINA</p><p>Forma bolhas defensivas e controla o espaço com garras e minas.</p></div></div><p class="file-code">MHX2 // 03</p><h3>Bubble Crab</h3><p>Defesa em camadas.</p></article>
+                <article class="file-item file-red" tabindex="0"><div class="file-art"><img src="assets/img/x2/bosses/reference/flame-stag.png" alt="Flame Stag"><div class="file-reveal"><p class="file-location">ÁREA // VULCÃO</p><p>Corre pelas paredes, acende os chifres e transforma a arena em lava.</p></div></div><p class="file-code">MHX2 // 04</p><h3>Flame Stag</h3><p>Investida vulcânica.</p></article>
+                <article class="file-item file-electric" tabindex="0"><div class="file-art"><img src="assets/img/x2/bosses/reference/morph-moth.png" alt="Morph Moth"><div class="file-reveal"><p class="file-location">ÁREA // FERRO-VELHO</p><p>Alterna entre casulo e forma aérea para disparar sucata em toda a sala.</p></div></div><p class="file-code">MHX2 // 05</p><h3>Morph Moth</h3><p>Metamorfose mecânica.</p></article>
+                <article class="file-item file-red" tabindex="0"><div class="file-art"><img src="assets/img/x2/bosses/reference/magna-centipede.png" alt="Magna Centipede"><div class="file-reveal"><p class="file-location">ÁREA // BASE MAGNÉTICA</p><p>Usa teleporte, cauda magnética e armadilhas para roubar habilidades de X.</p></div></div><p class="file-code">MHX2 // 06</p><h3>Magna Centipede</h3><p>Infiltração magnética.</p></article>
+                <article class="file-item file-blue" tabindex="0"><div class="file-art"><img src="assets/img/x2/bosses/reference/crystal-snail.png" alt="Crystal Snail"><div class="file-reveal"><p class="file-location">ÁREA // MINA DE CRISTAL</p><p>Controla o ritmo da luta e separa o corpo da concha para mudar o padrão.</p></div></div><p class="file-code">MHX2 // 07</p><h3>Crystal Snail</h3><p>Defesa cristalina.</p></article>
+                <article class="file-item file-aqua" tabindex="0"><div class="file-art"><img src="assets/img/x2/bosses/reference/overdrive-ostrich.png" alt="Overdrive Ostrich"><div class="file-reveal"><p class="file-location">ÁREA // BASE DO DESERTO</p><p>Usa velocidade, lâminas sônicas e saltos para dominar a pista de areia.</p></div></div><p class="file-code">MHX2 // 08</p><h3>Overdrive Ostrich</h3><p>Velocidade de ruptura.</p></article>
             </div>
+        </section>
 
-            <div class="hero-card" data-crest="z-saber">
-                <div class="card-inner">
-                    <div class="cyber-rank rank-red">X4</div>
-                    <h3>A Guerra Repliforce</h3>
-                    <p class="partner">Era: PlayStation 1 (32-bits)</p>
-                    <p class="description">Um divisor de águas na franquia. Zero torna-se totalmente jogável com sua
-                        letal Z-Saber, enfrentando uma trágica história de traição militar.</p>
-                    <div class="crest crest-red">Z-Saber</div>
-                </div>
-            </div>
+        <section class="mavericks-section" aria-labelledby="mavericks-x3-title">
+<div class="section-heading"><p class="eyebrow">ARQUIVO X3</p><h2 id="mavericks-x3-title">A operação Doppler</h2><p>Os oito Mavericks de Mega Man X3.</p></div>
+<div class="carousel-controls" aria-label="Controles da galeria Maverick X3"><p><span id="maverick-x3-position">01</span> / 08</p><div><button class="carousel-button" type="button" data-carousel-target="maverick-x3-carousel" data-carousel-direction="prev" aria-label="Ver Maverick X3 anterior" aria-controls="maverick-x3-carousel">←</button><button class="carousel-button" type="button" data-carousel-target="maverick-x3-carousel" data-carousel-direction="next" aria-label="Ver próximo Maverick X3" aria-controls="maverick-x3-carousel">→</button></div></div>
+<div class="maverick-carousel x3-maverick-carousel" id="maverick-x3-carousel" data-position-id="maverick-x3-position" aria-label="Galeria dos Mavericks de Mega Man X3">
+<article class="file-item file-ice" tabindex="0" style="--portrait-color:#90d0e9"><div class="file-art"><img src="assets/img/x3/bosses/blizzard-buffalo.png?v=portraits-2" alt="Blizzard Buffalo" width="442" height="386" loading="lazy"><div class="file-reveal"><p class="file-location">CIDADE CONGELADA</p><p>Fraqueza: Parasitic Bomb</p><a href="detonado-x3.html#blizzard-buffalo">Consultar estratégia</a></div></div><p class="file-code">MHX3 // 01</p><h3>Blizzard Buffalo</h3><p>Frost Shield</p></article>
+<article class="file-item file-aqua" tabindex="0" style="--portrait-color:#70cbb6"><div class="file-art"><img src="assets/img/x3/bosses/toxic-seahorse.png?v=portraits-2" alt="Toxic Seahorse" width="442" height="386" loading="lazy"><div class="file-reveal"><p class="file-location">ESTAÇÃO DE TRATAMENTO</p><p>Fraqueza: Frost Shield</p><a href="detonado-x3.html#toxic-seahorse">Consultar estratégia</a></div></div><p class="file-code">MHX3 // 02</p><h3>Toxic Seahorse</h3><p>Acid Burst</p></article>
+<article class="file-item file-gold" tabindex="0" style="--portrait-color:#e5c36c"><div class="file-art"><img src="assets/img/x3/bosses/tunnel-rhino.png" alt="Tunnel Rhino" width="442" height="386" loading="lazy"><div class="file-reveal"><p class="file-location">MINA DE ENERGIA</p><p>Fraqueza: Acid Burst</p><a href="detonado-x3.html#tunnel-rhino">Consultar estratégia</a></div></div><p class="file-code">MHX3 // 03</p><h3>Tunnel Rhino</h3><p>Tornado Fang</p></article>
+<article class="file-item file-electric" tabindex="0" style="--portrait-color:#bca1df"><div class="file-art"><img src="assets/img/x3/bosses/volt-catfish.png?v=portraits-2" alt="Volt Catfish" width="442" height="386" loading="lazy"><div class="file-reveal"><p class="file-location">USINA ELÉTRICA</p><p>Fraqueza: Tornado Fang</p><a href="detonado-x3.html#volt-catfish">Consultar estratégia</a></div></div><p class="file-code">MHX3 // 04</p><h3>Volt Catfish</h3><p>Triad Thunder</p></article>
+<article class="file-item file-red" tabindex="0" style="--portrait-color:#ec9f98"><div class="file-art"><img src="assets/img/x3/bosses/crush-crawfish.png" alt="Crush Crawfish" width="442" height="386" loading="lazy"><div class="file-reveal"><p class="file-location">ESTALEIRO</p><p>Fraqueza: Triad Thunder</p><a href="detonado-x3.html#crush-crawfish">Consultar estratégia</a></div></div><p class="file-code">MHX3 // 05</p><h3>Crush Crawfish</h3><p>Spinning Blade</p></article>
+<article class="file-item file-forest" tabindex="0" style="--portrait-color:#a5d47e"><div class="file-art"><img src="assets/img/x3/bosses/neon-tiger.png?v=portraits-2" alt="Neon Tiger" width="442" height="386" loading="lazy"><div class="file-reveal"><p class="file-location">FLORESTA MECÂNICA</p><p>Fraqueza: Spinning Blade</p><a href="detonado-x3.html#neon-tiger">Consultar estratégia</a></div></div><p class="file-code">MHX3 // 06</p><h3>Neon Tiger</h3><p>Ray Splasher</p></article>
+<article class="file-item file-blue" tabindex="0" style="--portrait-color:#85b8eb"><div class="file-art"><img src="assets/img/x3/bosses/gravity-beetle.png" alt="Gravity Beetle" width="442" height="386" loading="lazy"><div class="file-reveal"><p class="file-location">AEROPORTO</p><p>Fraqueza: Ray Splasher</p><a href="detonado-x3.html#gravity-beetle">Consultar estratégia</a></div></div><p class="file-code">MHX3 // 07</p><h3>Gravity Beetle</h3><p>Gravity Well</p></article>
+<article class="file-item file-orange" tabindex="0" style="--portrait-color:#efb775"><div class="file-art"><img src="assets/img/x3/bosses/blast-hornet.png" alt="Blast Hornet" width="442" height="386" loading="lazy"><div class="file-reveal"><p class="file-location">FÁBRICA DE ARMAMENTOS</p><p>Fraqueza: Gravity Well</p><a href="detonado-x3.html#blast-hornet">Consultar estratégia</a></div></div><p class="file-code">MHX3 // 08</p><h3>Blast Hornet</h3><p>Parasitic Bomb</p></article>
+</div></section>
 
-            <div class="hero-card" data-crest="falcon">
-                <div class="card-inner">
-                    <div class="cyber-rank rank-blue">X5</div>
-                    <h3>A Queda de Eurasia</h3>
-                    <p class="partner">Era: PlayStation 1</p>
-                    <p class="description">Uma corrida contra o tempo para impedir que a colônia espacial Eurasia
-                        destrua a Terra. O confronto definitivo entre ideais de X e Zero.</p>
-                    <div class="crest crest-blue">Falcon Armor</div>
-                </div>
-            </div>
+        <section class="mavericks-section" aria-labelledby="mavericks-x4-title">
+<div class="section-heading"><p class="eyebrow">ARQUIVO X4</p><h2 id="mavericks-x4-title">A rebelião da Repliforce</h2><p>Consulte os oito Mavericks e abra cada ficha para acessar as estratégias de X e Zero.</p></div>
+<div class="carousel-controls" aria-label="Controles da galeria Maverick X4"><p><span id="maverick-x4-position">01</span> / 08</p><div><button class="carousel-button" type="button" data-carousel-target="maverick-x4-carousel" data-carousel-direction="prev" aria-label="Ver Maverick X4 anterior">←</button><button class="carousel-button" type="button" data-carousel-target="maverick-x4-carousel" data-carousel-direction="next" aria-label="Ver próximo Maverick X4">→</button></div></div>
+<div class="maverick-carousel x4-maverick-carousel" id="maverick-x4-carousel" data-position-id="maverick-x4-position" aria-label="Galeria dos Mavericks de Mega Man X4">
+<article class="file-item" tabindex="0" style="--portrait-color:#b9d98f"><div class="file-art"><img src="assets/img/x4/bosses/split-mushroom.png" alt="Web Spider" width="440" height="385" loading="lazy"><div class="file-reveal"><p class="file-location">SELVA</p><p>X: Twin Slasher<br>Zero: Kuuenbu</p><a href="detonado-x4.html#web-spider">Consultar estratégias</a></div></div><p class="file-code">MHX4 // 01</p><h3>Web Spider</h3><p>Lightning Web / Raijingeki</p></article>
+<article class="file-item" tabindex="0" style="--portrait-color:#cfe58f"><div class="file-art"><img src="assets/img/x4/bosses/jet-stingray.png" alt="Split Mushroom" width="440" height="385" loading="lazy"><div class="file-reveal"><p class="file-location">LABORATÓRIO BIOLÓGICO</p><p>X: Lightning Web<br>Zero: Raijingeki</p><a href="detonado-x4.html#split-mushroom">Consultar estratégias</a></div></div><p class="file-code">MHX4 // 02</p><h3>Split Mushroom</h3><p>Soul Body / Kuuenbu</p></article>
+<article class="file-item" tabindex="0" style="--portrait-color:#bca3e5"><div class="file-art"><img src="assets/img/x4/bosses/cyber-peacock.png" alt="Cyber Peacock" width="440" height="385" loading="lazy"><div class="file-reveal"><p class="file-location">CYBER SPACE</p><p>X: Soul Body<br>Zero: Ryuenjin</p><a href="detonado-x4.html#cyber-peacock">Consultar estratégias</a></div></div><p class="file-code">MHX4 // 03</p><h3>Cyber Peacock</h3><p>Aiming Laser / Rakuhouha</p></article>
+<article class="file-item" tabindex="0" style="--portrait-color:#e69aa5"><div class="file-art"><img src="assets/img/x4/bosses/storm-owl.png" alt="Storm Owl" width="440" height="385" loading="lazy"><div class="file-reveal"><p class="file-location">FORÇA AÉREA</p><p>X: Aiming Laser<br>Zero: Rakuhouha</p><a href="detonado-x4.html#storm-owl">Consultar estratégias</a></div></div><p class="file-code">MHX4 // 04</p><h3>Storm Owl</h3><p>Double Cyclone / Tenkuuha</p></article>
+<article class="file-item" tabindex="0" style="--portrait-color:#efaa86"><div class="file-art"><img src="assets/img/x4/bosses/magma-dragoon.png" alt="Magma Dragoon" width="440" height="385" loading="lazy"><div class="file-reveal"><p class="file-location">VULCÃO</p><p>X: Double Cyclone<br>Zero: Shippuuga</p><a href="detonado-x4.html#magma-dragoon">Consultar estratégias</a></div></div><p class="file-code">MHX4 // 05</p><h3>Magma Dragoon</h3><p>Rising Fire / Ryuenjin</p></article>
+<article class="file-item" tabindex="0" style="--portrait-color:#a8d4eb"><div class="file-art"><img src="assets/img/x4/bosses/frost-walrus.png" alt="Frost Walrus" width="440" height="385" loading="lazy"><div class="file-reveal"><p class="file-location">BASE DE NEVE</p><p>X: Rising Fire<br>Zero: Ryuenjin</p><a href="detonado-x4.html#frost-walrus">Consultar estratégias</a></div></div><p class="file-code">MHX4 // 06</p><h3>Frost Walrus</h3><p>Frost Tower / Hyouretsuzan</p></article>
+<article class="file-item" tabindex="0" style="--portrait-color:#efb87c"><div class="file-art"><img src="assets/img/x4/bosses/web-spider.png" alt="Jet Stingray" width="440" height="385" loading="lazy"><div class="file-reveal"><p class="file-location">BASE MARÍTIMA</p><p>X: Frost Tower<br>Zero: Hyouretsuzan</p><a href="detonado-x4.html#jet-stingray">Consultar estratégias</a></div></div><p class="file-code">MHX4 // 07</p><h3>Jet Stingray</h3><p>Ground Hunter / Hienkyaku</p></article>
+<article class="file-item" tabindex="0" style="--portrait-color:#dda174"><div class="file-art"><img src="assets/img/x4/bosses/slash-beast.png" alt="Slash Beast" width="440" height="385" loading="lazy"><div class="file-reveal"><p class="file-location">TREM MILITAR</p><p>X: Ground Hunter<br>Zero: Kuuenbu</p><a href="detonado-x4.html#slash-beast">Consultar estratégias</a></div></div><p class="file-code">MHX4 // 08</p><h3>Slash Beast</h3><p>Twin Slasher / Shippuuga</p></article>
+</div></section>
 
-            <div class="hero-card" data-crest="shadow">
-                <div class="card-inner">
-                    <div class="cyber-rank rank-purple">X6</div>
-                    <h3>O Fenômeno Nightmare</h3>
-                    <p class="partner">Era: PlayStation 1</p>
-                    <p class="description">Com o sacrifício de Zero, X empunha a Z-Saber para combater o vírus
-                        Nightmare, introduzindo um sistema punitivo de resgate de Reploids.</p>
-                    <div class="crest crest-purple">Shadow Armor</div>
-                </div>
-            </div>
+        <section class="mavericks-section" aria-labelledby="mavericks-x5-title">
+<div class="section-heading"><p class="eyebrow">ARQUIVO X5</p><h2 id="mavericks-x5-title">A ameaça da colônia Eurasia</h2><p>Consulte os oito Mavericks infectados e abra as rotas de X ou Zero.</p></div>
+<div class="carousel-controls" aria-label="Controles da galeria Maverick X5"><p><span id="maverick-x5-position">01</span> / 08</p><div><button class="carousel-button" type="button" data-carousel-target="maverick-x5-carousel" data-carousel-direction="prev" aria-label="Ver Maverick X5 anterior">←</button><button class="carousel-button" type="button" data-carousel-target="maverick-x5-carousel" data-carousel-direction="next" aria-label="Ver próximo Maverick X5">→</button></div></div>
+<div class="maverick-carousel x5-maverick-carousel" id="maverick-x5-carousel" data-position-id="maverick-x5-position" aria-label="Galeria dos Mavericks de Mega Man X5">
+<article class="file-item" tabindex="0" style="--portrait-color:#d8b580"><div class="file-art"><img src="assets/img/x5/bosses/grizzly-slash.png" alt="Grizzly Slash"><div class="file-reveal"><p class="file-location">CAMINHÕES</p><p>X: Spike Ball<br>Zero: Twin Dream</p><a href="detonado-x5.html#grizzly-slash">Consultar estratégias</a></div></div><p class="file-code">MHX5 // 01</p><h3>Grizzly Slash</h3><p>C-Shot / C-Sword</p></article>
+<article class="file-item" tabindex="0" style="--portrait-color:#9bcde4"><div class="file-art"><img src="assets/img/x5/bosses/duff-mcwhalen.png" alt="Duff McWhalen"><div class="file-reveal"><p class="file-location">OCEANO</p><p>X: C-Shot<br>Zero: C-Sword</p><a href="detonado-x5.html#duff-mcwhalen">Consultar estratégias</a></div></div><p class="file-code">MHX5 // 02</p><h3>Duff McWhalen</h3><p>Goo Shaver / F-Splasher</p></article>
+<article class="file-item" tabindex="0" style="--portrait-color:#9eb7ec"><div class="file-art"><img src="assets/img/x5/bosses/squid-adler.png" alt="Squid Adler"><div class="file-reveal"><p class="file-location">BASE AÉREA</p><p>X: Gel Shaver<br>Zero: F-Splasher</p><a href="detonado-x5.html#squid-adler">Consultar estratégias</a></div></div><p class="file-code">MHX5 // 03</p><h3>Squid Adler</h3><p>Tri-Thunder / E-Blade</p></article>
+<article class="file-item" tabindex="0" style="--portrait-color:#e39ca7"><div class="file-art"><img src="assets/img/x5/bosses/izzy-glow.png" alt="Izzy Glow"><div class="file-reveal"><p class="file-location">LABORATÓRIO</p><p>X: Tri-Thunder<br>Zero: E-Blade</p><a href="detonado-x5.html#izzy-glow">Consultar estratégias</a></div></div><p class="file-code">MHX5 // 04</p><h3>Izzy Glow</h3><p>F-Laser / C-Flasher</p></article>
+<article class="file-item" tabindex="0" style="--portrait-color:#bda6df"><div class="file-art"><img src="assets/img/x5/bosses/dark-dizzy.png" alt="Dark Dizzy"><div class="file-reveal"><p class="file-location">PLANETÁRIO</p><p>X: F-Laser<br>Zero: C-Flasher</p><a href="detonado-x5.html#dark-dizzy">Consultar estratégias</a></div></div><p class="file-code">MHX5 // 05</p><h3>Dark Dizzy</h3><p>Dark Hold</p></article>
+<article class="file-item" tabindex="0" style="--portrait-color:#a4c8e8"><div class="file-art"><img src="assets/img/x5/bosses/the-skiver.png" alt="The Skiver"><div class="file-reveal"><p class="file-location">FORÇA AÉREA</p><p>Fraqueza: Dark Hold</p><a href="detonado-x5.html#the-skiver">Consultar estratégias</a></div></div><p class="file-code">MHX5 // 06</p><h3>The Skiver</h3><p>Wing Spiral / W-Shredder</p></article>
+<article class="file-item" tabindex="0" style="--portrait-color:#eeaa7f"><div class="file-art"><img src="assets/img/x5/bosses/mattrex.png" alt="Mattrex"><div class="file-reveal"><p class="file-location">VULCÃO</p><p>X: Wing Spiral<br>Zero: W-Shredder</p><a href="detonado-x5.html#mattrex">Consultar estratégias</a></div></div><p class="file-code">MHX5 // 07</p><h3>Mattrex</h3><p>Ground Fire / Quake Blazer</p></article>
+<article class="file-item" tabindex="0" style="--portrait-color:#a8d29b"><div class="file-art"><img src="assets/img/x5/bosses/axle-the-red-clean.png" alt="Axle the Red"><div class="file-reveal"><p class="file-location">FLORESTA</p><p>X: Ground Fire<br>Zero: Quake Blazer</p><a href="detonado-x5.html#axle-the-red">Consultar estratégias</a></div></div><p class="file-code">MHX5 // 08</p><h3>Axle the Red</h3><p>Spike Ball / Twin Dream</p></article>
+</div></section>
 
-        </div>
-    </section>
+        <section class="mavericks-section" aria-labelledby="mavericks-x6-title">
+<div class="section-heading"><p class="eyebrow">ARQUIVO X6</p><h2 id="mavericks-x6-title">Os Nightmare Investigators</h2><p>Consulte os oito setores contaminados pelo fenômeno Nightmare.</p></div>
+<div class="carousel-controls" aria-label="Controles da galeria Maverick X6"><p><span id="maverick-x6-position">01</span> / 08</p><div><button class="carousel-button" type="button" data-carousel-target="maverick-x6-carousel" data-carousel-direction="prev" aria-label="Ver Investigator anterior">←</button><button class="carousel-button" type="button" data-carousel-target="maverick-x6-carousel" data-carousel-direction="next" aria-label="Ver próximo Investigator">→</button></div></div>
+<div class="maverick-carousel x6-maverick-carousel" id="maverick-x6-carousel" data-position-id="maverick-x6-position" aria-label="Galeria dos Nightmare Investigators de Mega Man X6">
+<article class="file-item" tabindex="0" style="--portrait-color:#b9dfc7"><div class="file-art"><img src="assets/img/x6/bosses/commander-yammark.png" alt="Commander Yammark"><div class="file-reveal"><p class="file-location">AMAZON AREA</p><p>Fraqueza: Ray Arrow</p><a href="detonado-x6.html#commander-yammark">Consultar estratégia</a></div></div><p class="file-code">MHX6 // 01</p><h3>Commander Yammark</h3><p>Yammar Option</p></article>
+<article class="file-item" tabindex="0" style="--portrait-color:#decf9b"><div class="file-art"><img src="assets/img/x6/bosses/ground-scaravich.png" alt="Ground Scaravich"><div class="file-reveal"><p class="file-location">CENTRAL MUSEUM</p><p>Fraqueza: Yammar Option</p><a href="detonado-x6.html#ground-scaravich">Consultar estratégia</a></div></div><p class="file-code">MHX6 // 02</p><h3>Ground Scaravich</h3><p>Ground Dash</p></article>
+<article class="file-item" tabindex="0" style="--portrait-color:#efaa7b"><div class="file-art"><img src="assets/img/x6/bosses/blaze-heatnix.png" alt="Blaze Heatnix"><div class="file-reveal"><p class="file-location">MAGMA AREA</p><p>Fraqueza: Ground Dash</p><a href="detonado-x6.html#blaze-heatnix">Consultar estratégia</a></div></div><p class="file-code">MHX6 // 03</p><h3>Blaze Heatnix</h3><p>Magma Blade</p></article>
+<article class="file-item" tabindex="0" style="--portrait-color:#c5d9ed"><div class="file-art"><img src="assets/img/x6/bosses/blizzard-wolfang.png" alt="Blizzard Wolfang"><div class="file-reveal"><p class="file-location">NORTHPOLE AREA</p><p>Fraqueza: Magma Blade</p><a href="detonado-x6.html#blizzard-wolfang">Consultar estratégia</a></div></div><p class="file-code">MHX6 // 04</p><h3>Blizzard Wolfang</h3><p>Ice Burst</p></article>
+<article class="file-item" tabindex="0" style="--portrait-color:#d9a7ad"><div class="file-art"><img src="assets/img/x6/bosses/rainy-turtloid.png" alt="Rainy Turtloid"><div class="file-reveal"><p class="file-location">INAMI TEMPLE</p><p>Fraqueza: Ice Burst</p><a href="detonado-x6.html#rainy-turtloid">Consultar estratégia</a></div></div><p class="file-code">MHX6 // 05</p><h3>Rainy Turtloid</h3><p>Meteor Rain</p></article>
+<article class="file-item" tabindex="0" style="--portrait-color:#b7addb"><div class="file-art"><img src="assets/img/x6/bosses/metal-shark-player.png" alt="Metal Shark Player"><div class="file-reveal"><p class="file-location">RECYCLE LAB</p><p>Fraqueza: Meteor Rain</p><a href="detonado-x6.html#metal-shark-player">Consultar estratégia</a></div></div><p class="file-code">MHX6 // 06</p><h3>Metal Shark Player</h3><p>Metal Anchor</p></article>
+<article class="file-item" tabindex="0" style="--portrait-color:#e6b3cb"><div class="file-art"><img src="assets/img/x6/bosses/shield-sheldon.png" alt="Shield Sheldon"><div class="file-reveal"><p class="file-location">LASER INSTITUTE</p><p>Fraqueza: Metal Anchor</p><a href="detonado-x6.html#shield-sheldon">Consultar estratégia</a></div></div><p class="file-code">MHX6 // 07</p><h3>Shield Sheldon</h3><p>Guard Shell</p></article>
+<article class="file-item" tabindex="0" style="--portrait-color:#c0b2dc"><div class="file-art"><img src="assets/img/x6/bosses/infinity-mijinion.png" alt="Infinity Mijinion"><div class="file-reveal"><p class="file-location">WEAPON CENTER</p><p>Fraqueza: Guard Shell</p><a href="detonado-x6.html#infinity-mijinion">Consultar estratégia</a></div></div><p class="file-code">MHX6 // 08</p><h3>Infinity Mijinion</h3><p>Ray Arrow</p></article>
+</div></section>
 
-    <footer>
-        <p>&copy; 2026 Mega Man X Evolution Archive - by The Blind Eagle</p>
+    </main>
+
+    <footer class="home-footer">
+        <img src="assets/img/base-hunter-x-logo.png" alt="Base Hunter X">
+        <p>Arquivo de evolução Mega Man X1—X6</p>
+        <p>&copy; 2026 The Blind Eagle</p>
     </footer>
-
-    <script src="assets/js/script.js"></script>
+    <script src="assets/js/script.js?v=x4-2"></script>
 </body>
-
 </html>

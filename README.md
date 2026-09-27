@@ -7,6 +7,13 @@ Reconstrução total de uma Landing Page focada nos eventos do ano 21XX, contand
 - `index.html`: Toda a base que conta a narrativa *Maverick Hunter* através de grandes Cards Tipográficos "X1", "X4", etc.
 - `styles.css`: Estilização totalmente remodelada: Blue e Crimson (vermelho/rosa choque) tornaram-se as cores guias, juntamente com o Shadow (roxa) para representar o vírus Nightmare no X6. Tipografia digital com efeitos `Text-Stroke` responsivos no hover garantem imersão estética sem pesar o recarregamento com centenas de imagens.
 - `script.js`: Reduzido para controlar as interações de partículas de chuva virtual ("Cyber Drops") representando os dados processados na base de Dr. Light/Dr. Doppler, junto do navbar com glassmorphism dinâmico.
+- `docs/accessibility.md`: Padrão de acessibilidade para produto, desenvolvimento e suporte, cobrindo WCAG 2.2, navegação por teclado, alto contraste, narração de tela e orientação ao usuário.
+
+## Acessibilidade
+
+A plataforma inclui um botão fixo com o ícone internacional de PCD. Ele abre opções de alto contraste, narração de tela via navegador, guia de navegação por teclado e texto ampliado. O painel também inclui a agente "Roll Assist", com orientações simples e respostas visuais durante a navegação.
+
+Consulte `docs/accessibility.md` para o padrão completo e para o roteiro de atendimento do time de suporte.
 
 ## Instruções
 Siga os mesmos padrões de execução em `localhost` providos pelo Node.js `http-server` ou basta rodar o `index.html` caso as permissões do navegador não exijam módulo de recarregamento remoto.

@@ -25,3 +25,6 @@ npm-debug.log*
 dist/
 build/
 assets/ROM/
+
+# Intermediate image-generation review files
+agent-help-frames/
