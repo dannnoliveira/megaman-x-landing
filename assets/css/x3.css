@@ -1,0 +1,21 @@
+/* The portrait frame follows the source sheet without stretching or overlays. */
+.x3-page .x3-stage .boss-img-wrap,
+.x3-maverick-carousel .file-art { aspect-ratio: 442 / 386; padding: 0; }
+.x3-page .x3-stage .boss-img-wrap { background: var(--stage-tint); }
+.x3-page .x3-stage .boss-img,
+.x3-maverick-carousel .file-art img {
+    width: 100%; height: 100%; max-width: none; max-height: none;
+    object-fit: contain; object-position: right bottom;
+    mix-blend-mode: normal; transform: none !important; filter: none;
+}
+.x3-maverick-carousel .file-art { background: var(--portrait-color); }
+.x3-maverick-carousel .file-art::before,
+.x3-maverick-carousel .file-art::after { display: none; }
+.x3-maverick-carousel .file-reveal { background: rgba(12, 19, 25, .94); }
+.x3-maverick-carousel .file-reveal a { color: #fff; text-decoration: underline; }
+.x3-maverick-carousel .file-item:focus-within .file-reveal { opacity: 1; transform: none; }
+.x3-page .item-chip { gap: 8px; flex-wrap: wrap; }
+.x3-page .doppler-entry img { width: min(100%, 260px); height: auto; display: block; background: #73b7ad; }
+.x3-sources { padding-block: 28px; line-height: 1.8; }
+.x3-sources a { color: #18527b; text-decoration: underline; }
+.x3-page .detonado-intro h1 { letter-spacing: 0; }

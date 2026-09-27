@@ -7,150 +7,47 @@
     <title>Mega Man X - Detonado X1</title>
     <meta name="description" content="Detonado separado de Mega Man X1 com protocolo de operação e área reservada para emulação.">
 
-    <!-- Google Fonts for digital aesthetics -->
-    <link
-        href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&family=Inter:wght@300;400;600&display=swap"
-        rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@500;600;700&family=DM+Serif+Display&family=Inter:wght@300;400;500;600&family=Orbitron:wght@400;700;900&display=swap" rel="stylesheet">
 
-    <link rel="stylesheet" href="assets/css/styles.css">
+    <link rel="stylesheet" href="assets/css/styles.css?v=x3-1">
 </head>
 
 <body class="detonado-page">
+    <a class="skip-link" href="#main-content">Pular para o conteúdo principal</a>
     <div id="particles-container"></div>
 
-    <!-- Navbar -->
-    <nav class="navbar">
-        <a href="index.html" class="logo">
-            MEGA MAN <span class="x-red">X</span>
+    <nav class="navbar detonado-nav" aria-label="Navegação principal">
+        <a href="index.html" class="logo" aria-label="Base Hunter X - início">
+            <span class="logo-mark" aria-hidden="true">
+                <img src="assets/img/base-hunter-x-logo.png" alt="">
+            </span>
         </a>
         <ul class="nav-links">
-            <li><a href="index.html">Base Hunter</a></li>
+            <li><a href="index.html">A Base</a></li>
+            <li><details class="detonado-menu"><summary>Detonado</summary><nav aria-label="Escolher detonado"><a href="detonado.html" aria-current="page">Mega Man X1</a><a href="detonado-x2.html">Mega Man X2</a><a href="detonado-x3.html">Mega Man X3</a><a href="detonado-x4.html">Mega Man X4</a><a href="detonado-x5.html">Mega Man X5</a><a href="detonado-x6.html">Mega Man X6</a></nav></details></li>
             <li><a href="#emulator">Emulador</a></li>
-            <li><a href="#detonado">Detonado X1</a></li>
         </ul>
-        <button class="digi-btn btn-small">Conectar Sistema</button>
+        <a class="detonado-nav-action" href="#emulator">Jogar agora <span aria-hidden="true">↓</span></a>
     </nav>
 
-    <!-- ░░ EMULATOR SECTION ░░ -->
-    <section id="emulator" class="detonado-section" style="padding-bottom: 0;">
-        <div class="emulator-section" id="emulator-section">
-            <div class="emulator-copy">
-                <span class="stage-badge badge-sky">Terminal SNES</span>
-                <h2 class="stage-name" style="font-size:1.6rem;">EMULADOR DE MISSÃO</h2>
-                <p class="stage-lore">Emulador SNES rodando diretamente no navegador via <strong>EmulatorJS</strong>. Use o teclado ou conecte um controle USB para jogar Mega Man X.</p>
-            </div>
-
-            <!-- Emulator Shell -->
-            <div class="emulator-shell" id="emulator-shell">
-                <div class="emulator-toolbar">
-                    <span class="emu-status" id="emu-status">⚡ Mega Man X — Iniciando sistema…</span>
-                    <div class="emu-toolbar-btns">
-                        <button class="emu-btn" id="emu-upload" title="Carregar ROM externa">📁 Abrir ROM</button>
-                        <button class="emu-btn" id="emu-reset" title="Reiniciar">↺ Reset</button>
-                        <button class="emu-btn" id="emu-fullscreen" title="Tela cheia">⛶ Fullscreen</button>
-                    </div>
-                </div>
-                <div id="game-container" style="width:100%; max-width:800px; margin:0 auto;"></div>
-                <input type="file" id="rom-upload" accept=".zip,.sfc,.smc" style="display:none;">
-            </div>
-
-            <!-- Keyboard map -->
-            <div class="emu-keymap" id="emu-keymap">
-                <h4 class="emu-keymap-title">🕹️ Mapeamento de Teclado (padrão EmulatorJS)</h4>
-                <div class="emu-keymap-grid">
-                    <span class="emu-key">Z</span><span class="emu-key-desc">A (Snes)</span>
-                    <span class="emu-key">X</span><span class="emu-key-desc">B (Snes)</span>
-                    <span class="emu-key">A</span><span class="emu-key-desc">Y (Snes)</span>
-                    <span class="emu-key">S</span><span class="emu-key-desc">X (Snes)</span>
-                    <span class="emu-key">Q</span><span class="emu-key-desc">L</span>
-                    <span class="emu-key">W</span><span class="emu-key-desc">R</span>
-                    <span class="emu-key">Enter</span><span class="emu-key-desc">Start</span>
-                    <span class="emu-key">Shift</span><span class="emu-key-desc">Select</span>
-                    <span class="emu-key">↑ ↓ ← →</span><span class="emu-key-desc">D-Pad</span>
-                </div>
-            </div>
-        </div>
-
-        <!-- EmulatorJS — ROM local auto-carregada -->
-        <script>
-            window.EJS_player        = '#game-container';
-            window.EJS_core          = 'snes';
-            window.EJS_gameUrl       = 'assets/ROM/Mega Man X.zip';
-            window.EJS_pathtodata    = 'https://cdn.emulatorjs.org/stable/data/';
-            window.EJS_color         = '#00d4ff';
-            window.EJS_startOnLoaded = true;
-            window.EJS_language      = 'pt-BR';
-            window.EJS_onGameStart   = function() {
-                document.getElementById('emu-status').textContent = '✅ Mega Man X — Rodando!';
-            };
-        </script>
-        <script src="https://cdn.emulatorjs.org/stable/data/loader.js" async></script>
-        <script>
-        (function(){
-            const statusEl = document.getElementById('emu-status');
-            const romUpload = document.getElementById('rom-upload');
-            const emuUploadBtn = document.getElementById('emu-upload');
-
-            emuUploadBtn.addEventListener('click', () => romUpload.click());
-
-            romUpload.addEventListener('change', function(e) {
-                const file = e.target.files[0];
-                if (file) {
-                    const romUrl = URL.createObjectURL(file);
-                    statusEl.textContent = `⚡ Carregando: ${file.name}…`;
-                    
-                    // Atualiza a URL e reinicia
-                    window.EJS_gameUrl = romUrl;
-                    
-                    // Para reiniciar o EmulatorJS, o método mais limpo é limpar o container 
-                    // e forçar a reinicialização do loader se possível, ou recarregar as configurações.
-                    const container = document.getElementById('game-container');
-                    container.innerHTML = '';
-                    
-                    // Recriar o script do loader para forçar nova execução
-                    const oldLoader = document.querySelector('script[src*="emulatorjs"]');
-                    if (oldLoader) oldLoader.remove();
-                    
-                    const newLoader = document.createElement('script');
-                    newLoader.src = "https://cdn.emulatorjs.org/stable/data/loader.js";
-                    newLoader.async = true;
-                    document.body.appendChild(newLoader);
-
-                    window.EJS_onGameStart = function() {
-                        statusEl.textContent = `✅ ${file.name.replace(/\.[^/.]+$/, "")} — Rodando!`;
-                    };
-                }
-            });
-
-            document.getElementById('emu-reset').addEventListener('click', function() {
-                if (window.EJS_emulator) window.EJS_emulator.restart();
-            });
-            document.getElementById('emu-fullscreen').addEventListener('click', function() {
-                var container = document.getElementById('game-container');
-                var canvas = container.querySelector('canvas') || container;
-                if (canvas.requestFullscreen) canvas.requestFullscreen();
-                else if (canvas.webkitRequestFullscreen) canvas.webkitRequestFullscreen();
-            });
-        })();
-        </script>
-    </section>
+    <main id="main-content" tabindex="-1">
+        <header class="detonado-intro">
+            <p class="detonado-eyebrow">ARQUIVO DE OPERAÇÃO // MEGA MAN X1</p>
+            <img class="detonado-intro-logo" src="assets/img/base-hunter-x-logo.png" alt="Base Hunter X">
+            <h1>Guia de campo da primeira revolta Maverick.</h1>
+            <p class="detonado-intro-copy">A ordem completa das missões, upgrades, fraquezas e estratégias para atravessar a operação de 21XX.</p>
+            <a class="detonado-intro-link" href="#detonado">Iniciar detonado <span aria-hidden="true">↓</span></a>
+        </header>
 
     <!-- Detonado Walkthrough Section -->
-    <section id="detonado" class="detonado-section">
-        <h2 class="section-title">Detonado — Mega Man X1</h2>
-
-        <!-- Controls Panel -->
-        <div class="controls-panel">
-            <h3 class="controls-title"><span class="ctrl-icon">🎮</span> Protocolo de Operação</h3>
-            <div class="controls-grid">
-                <div class="ctrl-item"><span class="ctrl-key">Y</span><span class="ctrl-desc">X-Buster (segure para carregar e solte)</span></div>
-                <div class="ctrl-item"><span class="ctrl-key">B</span><span class="ctrl-desc">Pulo</span></div>
-                <div class="ctrl-item"><span class="ctrl-key">A</span><span class="ctrl-desc">Dash (após obter a Leg Part)</span></div>
-                <div class="ctrl-item"><span class="ctrl-key">R / L</span><span class="ctrl-desc">Troca de arma</span></div>
-                <div class="ctrl-item"><span class="ctrl-key">START</span><span class="ctrl-desc">Abre o Menu — troca armas, usa Sub-tanks e sai da fase</span></div>
-            </div>
+    <section id="detonado" class="detonado-section" tabindex="-1">
+        <div class="detonado-heading">
+            <p class="detonado-eyebrow">PROTOCOLO COMPLETO</p>
+            <h2 class="section-title">Detonado Mega Man X1</h2>
+            <p>Do primeiro confronto com Vile à fortaleza de Sigma, todos os dados estão organizados em uma única rota de missão.</p>
         </div>
-
 
         <!-- Stage: Auto Estrada -->
         <div class="stage-block intro-stage">
@@ -163,7 +60,7 @@
                 enfrentará <strong>Vile</strong>, mas não poderá vencê-lo. Zero chegará e o salvará.</p>
             <div class="boss-card vile-preview">
                 <div class="boss-img-wrap">
-                    <img src="assets/img/Vile.png" alt="Vile" class="boss-img">
+                    <img src="assets/img/Vile-clean.png" alt="Vile" class="boss-img">
                     <div class="boss-img-glow" style="--boss-color:#9d00ff"></div>
                 </div>
                 <div class="boss-info">
@@ -188,7 +85,7 @@
                 abismo. Os inimigos em geral não causam problemas. Você encontrará a única peça de armadura obrigatória
                 do jogo nesta fase: a <strong>Leg Part</strong>.</p>
             <div class="items-row">
-                <div class="item-chip"><span class="item-icon">🦵</span> <strong>Leg Part</strong> — Permite Dash (botão
+                <div class="item-chip armor-item"><img class="armor-part-icon" src="assets/img/armor/light-legs.png" alt=""> <strong>Leg Part</strong> — Permite Dash (botão
                     A ou duplo toque direcional) e saltos mais longos.</div>
                 <div class="item-chip"><img src="assets/img/HeartTank.gif"
                         style="width: 100px; vertical-align: middle; margin-right: 6px;" alt="Heart Tank"> <strong>Heart
@@ -197,13 +94,13 @@
             </div>
             <div class="boss-card">
                 <div class="boss-img-wrap">
-                    <img src="assets/img/Chill-Peguin.png" alt="Chill Penguin" class="boss-img">
+                    <img src="assets/img/mavericks-clean/Chill-Peguin.png" alt="Chill Penguin" class="boss-img">
                     <div class="boss-img-glow" style="--boss-color:#00ccff"></div>
                 </div>
                 <div class="boss-info">
                     <div class="boss-name-row">
                         <h4 class="boss-name">Chill Penguin</h4>
-                        <span class="boss-weakness">Fraqueza: <em>Fire Wave 🔥</em></span>
+                        <span class="boss-weakness">Fraqueza: <em>Fire Wave</em><img class="weapon-icon" src="assets/img/weapons/fire-wave.png" alt=""></span>
                     </div>
                     <div class="attacks-list">
                         <span class="attack-tag">Shotgun Ice</span>
@@ -240,7 +137,7 @@
             </div>
             <div class="boss-card sub-boss">
                 <div class="boss-img-wrap">
-                    <img src="assets/img/Thunder Slimer.png" alt="Thunder Slimer" class="boss-img">
+                    <img src="assets/img/Thunder-Slimer-clean.png" alt="Thunder Slimer" class="boss-img">
                     <div class="boss-img-glow" style="--boss-color:#ffe000"></div>
                 </div>
                 <div class="boss-info">
@@ -259,23 +156,23 @@
             </div>
             <div class="boss-card">
                 <div class="boss-img-wrap">
-                    <img src="assets/img/SparkMandrill.png" alt="Spark Mandrill" class="boss-img">
+                    <img src="assets/img/mavericks-clean/SparkMandrill.png" alt="Spark Mandrill" class="boss-img">
                     <div class="boss-img-glow" style="--boss-color:#ffe000"></div>
                 </div>
                 <div class="boss-info">
                     <div class="boss-name-row">
                         <h4 class="boss-name">Spark Mandrill</h4>
-                        <span class="boss-weakness">Fraqueza: <em>Shotgun Ice ❄️</em></span>
+                        <span class="boss-weakness">Fraqueza: <em>Shotgun Ice</em><img class="weapon-icon" src="assets/img/weapons/shotgun-ice.png" alt=""></span>
                     </div>
                     <div class="attacks-list">
-                        <span class="attack-tag">Spark Shot</span>
+                        <span class="attack-tag">Electric Spark</span>
                         <span class="attack-tag">Roof Climb</span>
                         <span class="attack-tag">Dashing Punch</span>
                         <span class="attack-tag">Super Jump</span>
                     </div>
                     <p class="strategy"><span class="strat-label">ESTRATÉGIA:</span> Use <em>Shotgun Ice</em>. Atire e
                         espere ele se libertar do gelo para atirar novamente. Repita até congelá-lo definitivamente.
-                        Recompensa: <strong>Spark Shot</strong>.</p>
+                        Recompensa: <strong>Electric Spark</strong>.</p>
                 </div>
             </div>
         </div>
@@ -305,20 +202,20 @@
             </div>
             <div class="boss-card">
                 <div class="boss-img-wrap">
-                    <img src="assets/img/ArmoredArmadillo.png" alt="Armored Armadillo" class="boss-img">
+                    <img src="assets/img/mavericks-clean/ArmoredArmadillo.png" alt="Armored Armadillo" class="boss-img">
                     <div class="boss-img-glow" style="--boss-color:#aaaaaa"></div>
                 </div>
                 <div class="boss-info">
                     <div class="boss-name-row">
                         <h4 class="boss-name">Armored Armadillo</h4>
-                        <span class="boss-weakness">Fraqueza: <em>Spark Shot ⚡</em></span>
+                        <span class="boss-weakness">Fraqueza: <em>Electric Spark</em><img class="weapon-icon" src="assets/img/weapons/electric-spark.png" alt=""></span>
                     </div>
                     <div class="attacks-list">
                         <span class="attack-tag">Energy Shot</span>
                         <span class="attack-tag">Rolling Shield</span>
                         <span class="attack-tag">Deflect Raid</span>
                     </div>
-                    <p class="strategy"><span class="strat-label">ESTRATÉGIA:</span> Acerte com <em>Spark Shot</em> para
+                    <p class="strategy"><span class="strat-label">ESTRATÉGIA:</span> Acerte com <em>Electric Spark</em> para
                         destruir a armadura, depois escale a parede. Quando ele ricocheteou, caia e acerte novamente.
                         Use o dash para desviar se vier na sua direção. Recompensa: <strong>Rolling Shield</strong>.</p>
                 </div>
@@ -341,7 +238,7 @@
             </div>
             <div class="boss-card sub-boss">
                 <div class="boss-img-wrap">
-                    <img src="assets/img/Utobolus.png" alt="Utobolus" class="boss-img">
+                    <img src="assets/img/Utobolus-clean.png" alt="Utobolus" class="boss-img">
                     <div class="boss-img-glow" style="--boss-color:#00ccff"></div>
                 </div>
                 <div class="boss-info">
@@ -358,13 +255,13 @@
             </div>
             <div class="boss-card">
                 <div class="boss-img-wrap">
-                    <img src="assets/img/LauncheOctopus.png" alt="Launch Octopus" class="boss-img">
+                    <img src="assets/img/mavericks-clean/LauncheOctopus.png" alt="Launch Octopus" class="boss-img">
                     <div class="boss-img-glow" style="--boss-color:#0055ff"></div>
                 </div>
                 <div class="boss-info">
                     <div class="boss-name-row">
                         <h4 class="boss-name">Launcher Octopus</h4>
-                        <span class="boss-weakness">Fraqueza: <em>Rolling Shield 🛡️</em></span>
+                        <span class="boss-weakness">Fraqueza: <em>Rolling Shield</em><img class="weapon-icon" src="assets/img/weapons/rolling-shield.png" alt=""></span>
                     </div>
                     <div class="attacks-list">
                         <span class="attack-tag">Homing Torpedo</span>
@@ -394,13 +291,13 @@
             </div>
             <div class="boss-card">
                 <div class="boss-img-wrap">
-                    <img src="assets/img/Boomer Kuwanger.png" alt="Boomer Kuwanger" class="boss-img">
+                    <img src="assets/img/mavericks-clean/Boomer Kuwanger.png" alt="Boomer Kuwanger" class="boss-img">
                     <div class="boss-img-glow" style="--boss-color:#9d00ff"></div>
                 </div>
                 <div class="boss-info">
                     <div class="boss-name-row">
                         <h4 class="boss-name">Boomer Kuwanger</h4>
-                        <span class="boss-weakness">Fraqueza: <em>Homing Torpedo 🎯</em></span>
+                        <span class="boss-weakness">Fraqueza: <em>Homing Torpedo</em><img class="weapon-icon" src="assets/img/weapons/homing-torpedo.png" alt=""></span>
                     </div>
                     <div class="attacks-list">
                         <span class="attack-tag">Boomerang Cutter</span>
@@ -428,7 +325,7 @@
                         style="width: 100px; vertical-align: middle; margin-right: 6px;" alt="Heart Tank"> <strong>Heart
                         Tank</strong> — Precisa da Leg Part e ter derrotado Launcher Octopus. Deslize pela parede no 1º
                     buraco e faça dash + salto para o lado oposto.</div>
-                <div class="item-chip"><span class="item-icon">🛡️</span> <strong>Body Part</strong> — No mesmo local do
+                <div class="item-chip armor-item"><img class="armor-part-icon" src="assets/img/armor/light-body.png" alt=""> <strong>Body Part</strong> — No mesmo local do
                     Heart Tank, vá para cima com dash + salto. Derrote o sub-chefe RT-55J para obter a Body Part
                     (aumenta sua defesa).</div>
             </div>
@@ -452,13 +349,13 @@
             </div>
             <div class="boss-card">
                 <div class="boss-img-wrap">
-                    <img src="assets/img/Sting-Chameleon.png" alt="Sting Chameleon" class="boss-img">
+                    <img src="assets/img/mavericks-clean/Sting-Chameleon.png" alt="Sting Chameleon" class="boss-img">
                     <div class="boss-img-glow" style="--boss-color:#00ff88"></div>
                 </div>
                 <div class="boss-info">
                     <div class="boss-name-row">
                         <h4 class="boss-name">Sting Chameleon</h4>
-                        <span class="boss-weakness">Fraqueza: <em>Boomerang Cutter 🪃</em></span>
+                        <span class="boss-weakness">Fraqueza: <em>Boomerang Cutter</em><img class="weapon-icon" src="assets/img/weapons/boomerang-cutter.png" alt=""></span>
                     </div>
                     <div class="attacks-list">
                         <span class="attack-tag">Chameleon Sting</span>
@@ -494,19 +391,19 @@
                     <strong>Sub-Tank</strong> — Nas plataformas com
                     lança-chamas. Suba na que dá pra alcançar, vá duas à esquerda e atire no vidro para acessar.
                 </div>
-                <div class="item-chip"><span class="item-icon">⛑️</span> <strong>Head Part</strong> — Após descer pelo
+                <div class="item-chip armor-item"><img class="armor-part-icon" src="assets/img/armor/light-helmet.png" alt=""> <strong>Head Part</strong> — Após descer pelo
                     muro metálico, atire nos cilindros de gás até explodirem e siga em frente. Permite quebrar alguns
                     tetos com cabeçada.</div>
             </div>
             <div class="boss-card">
                 <div class="boss-img-wrap">
-                    <img src="assets/img/StormEagle.png" alt="Storm Eagle" class="boss-img">
+                    <img src="assets/img/mavericks-clean/StormEagle.png" alt="Storm Eagle" class="boss-img">
                     <div class="boss-img-glow" style="--boss-color:#00ccff"></div>
                 </div>
                 <div class="boss-info">
                     <div class="boss-name-row">
                         <h4 class="boss-name">Storm Eagle</h4>
-                        <span class="boss-weakness">Fraqueza: <em>Chameleon Sting 🦎</em></span>
+                        <span class="boss-weakness">Fraqueza: <em>Chameleon Sting</em><img class="weapon-icon" src="assets/img/weapons/chameleon-sting.png" alt=""></span>
                     </div>
                     <div class="attacks-list">
                         <span class="attack-tag">Storm Tornado</span>
@@ -538,19 +435,19 @@
                     <strong>Sub-Tank</strong> — Área dos robôs
                     operários. Suba pelas plataformas, pendue-se e quebre os blocos com Boomerang Cutter.
                 </div>
-                <div class="item-chip"><span class="item-icon">🔫</span> <strong>Weapon Part</strong> — Precisa de Leg
+                <div class="item-chip armor-item"><img class="armor-part-icon" src="assets/img/armor/light-buster.png" alt=""> <strong>Weapon Part</strong> — Precisa de Leg
                     Part + Head Part. Use dash + salto para alcançar e quebrar blocos prateados no teto. Aumenta o poder
                     do X-Buster e permite carregar outras armas.</div>
             </div>
             <div class="boss-card">
                 <div class="boss-img-wrap">
-                    <img src="assets/img/FlameMammoth.png" alt="Flame Mammoth" class="boss-img">
+                    <img src="assets/img/mavericks-clean/FlameMammoth.png" alt="Flame Mammoth" class="boss-img">
                     <div class="boss-img-glow" style="--boss-color:#ff6600"></div>
                 </div>
                 <div class="boss-info">
                     <div class="boss-name-row">
                         <h4 class="boss-name">Flame Mammoth</h4>
-                        <span class="boss-weakness">Fraqueza: <em>Storm Tornado 🌪️</em></span>
+                        <span class="boss-weakness">Fraqueza: <em>Storm Tornado</em><img class="weapon-icon" src="assets/img/weapons/storm-tornado.png" alt=""></span>
                     </div>
                     <div class="attacks-list">
                         <span class="attack-tag">Fire Shot</span>
@@ -584,13 +481,13 @@
             </p>
             <div class="boss-card">
                 <div class="boss-img-wrap">
-                    <img src="assets/img/Vile.png" alt="Vile" class="boss-img">
+                    <img src="assets/img/Vile-clean.png" alt="Vile" class="boss-img">
                     <div class="boss-img-glow" style="--boss-color:#9d00ff"></div>
                 </div>
                 <div class="boss-info">
                     <div class="boss-name-row">
                         <h4 class="boss-name">Vile</h4>
-                        <span class="boss-weakness">Fraqueza: <em>Rolling Shield 🛡️</em></span>
+                        <span class="boss-weakness">Fraqueza: <em>Rolling Shield</em><img class="weapon-icon" src="assets/img/weapons/rolling-shield.png" alt=""></span>
                     </div>
                     <div class="attacks-list">
                         <span class="attack-tag">Napalm Bomb</span>
@@ -641,7 +538,7 @@
                 <div class="boss-info">
                     <div class="boss-name-row">
                         <h4 class="boss-name">Rangda Bangda</h4>
-                        <span class="boss-weakness">Melhor arma: <em>Homing Torpedo 🎯</em></span>
+                        <span class="boss-weakness">Melhor arma: <em>Homing Torpedo</em><img class="weapon-icon" src="assets/img/weapons/homing-torpedo.png" alt=""></span>
                     </div>
                     <div class="attacks-list">
                         <span class="attack-tag">Blue Eye Attack</span>
@@ -663,7 +560,7 @@
                 <span class="stage-badge badge-sigma">Fortaleza 3</span>
                 <h3 class="stage-name">FORTALEZA DE SIGMA — PARTE 3</h3>
             </div>
-            <p class="stage-lore">Reencontre os mestres derrotados em sequência: Armored Armadillo (Spark Shot) → Sting
+            <p class="stage-lore">Reencontre os mestres derrotados em sequência: Armored Armadillo (Electric Spark) → Sting
                 Chameleon (Boomerang Cutter) → Spark Mandrill (Shotgun Ice ou Hadoken) → Launcher Octopus (Rolling
                 Shield) → Flame Mammoth (Storm Tornado ou Hadoken).</p>
             <div class="boss-card">
@@ -674,7 +571,7 @@
                 <div class="boss-info">
                     <div class="boss-name-row">
                         <h4 class="boss-name">D-Rex</h4>
-                        <span class="boss-weakness">Melhor arma: <em>Boomerang Cutter 🪃</em></span>
+                        <span class="boss-weakness">Melhor arma: <em>Boomerang Cutter</em><img class="weapon-icon" src="assets/img/weapons/boomerang-cutter.png" alt=""></span>
                     </div>
                     <div class="attacks-list">
                         <span class="attack-tag">Rex Smash</span>
@@ -705,7 +602,7 @@
                     <div class="boss-info">
                         <div class="boss-name-row">
                             <h4 class="boss-name">Velguarder</h4>
-                            <span class="boss-weakness">Fraqueza: <em>Shotgun Ice ❄️</em></span>
+                            <span class="boss-weakness">Fraqueza: <em>Shotgun Ice</em><img class="weapon-icon" src="assets/img/weapons/shotgun-ice.png" alt=""></span>
                         </div>
                         <div class="attacks-list">
                             <span class="attack-tag">Leap Attack</span>
@@ -725,7 +622,7 @@
                     <div class="boss-info">
                         <div class="boss-name-row">
                             <h4 class="boss-name">Sigma</h4>
-                            <span class="boss-weakness">Melhor arma: <em>Spark Shot ⚡</em></span>
+                            <span class="boss-weakness">Melhor arma: <em>Electric Spark</em><img class="weapon-icon" src="assets/img/weapons/electric-spark.png" alt=""></span>
                         </div>
                         <div class="attacks-list">
                             <span class="attack-tag">Energy Wave</span>
@@ -733,7 +630,7 @@
                         </div>
                         <p class="strategy"><span class="strat-label">ESTRATÉGIA:</span> Comece com um <em>Hadoken</em>
                             logo de cara para acabar rapidamente. Caso contrário, desvie da onda de energia e do ataque
-                            em zigue-zague. Use <em>Spark Shot</em> como arma principal.</p>
+                            em zigue-zague. Use <em>Electric Spark</em> como arma principal.</p>
                     </div>
                 </div>
             </div>
@@ -745,7 +642,7 @@
                 <div class="boss-info">
                     <div class="boss-name-row">
                         <h4 class="boss-name">Sigma — 2ª Forma 💀</h4>
-                        <span class="boss-weakness">Melhor arma: <em>Rolling Shield 🛡️</em></span>
+                        <span class="boss-weakness">Melhor arma: <em>Rolling Shield</em><img class="weapon-icon" src="assets/img/weapons/rolling-shield.png" alt=""></span>
                     </div>
                     <div class="attacks-list">
                         <span class="attack-tag">Flame Thrower</span>
@@ -776,12 +673,113 @@
 
     </section>
 
+    <section class="detonado-section controls-bottom" aria-labelledby="controls-title">
+        <div class="controls-panel">
+            <h2 class="controls-title" id="controls-title"><span class="ctrl-icon" aria-hidden="true">🎮</span> Protocolo de Operação</h2>
+            <div class="controls-grid">
+                <div class="ctrl-item"><span class="ctrl-key">Y</span><span class="ctrl-desc">X-Buster (segure para carregar e solte)</span></div>
+                <div class="ctrl-item"><span class="ctrl-key">B</span><span class="ctrl-desc">Pulo</span></div>
+                <div class="ctrl-item"><span class="ctrl-key">A</span><span class="ctrl-desc">Dash</span></div>
+                <div class="ctrl-item"><span class="ctrl-key">R / L</span><span class="ctrl-desc">Troca de arma</span></div>
+                <div class="ctrl-item"><span class="ctrl-key">START</span><span class="ctrl-desc">Menu, armas, Sub-Tanks e saída da fase</span></div>
+            </div>
+        </div>
+    </section>
+
+    <section id="emulator" class="detonado-section emulator-zone" aria-labelledby="emulator-title">
+        <div class="emulator-section" id="emulator-section">
+            <div class="emulator-copy">
+                <p class="detonado-eyebrow">TERMINAL DE MISSÃO</p>
+                <h2 id="emulator-title">Agora é a sua vez.</h2>
+                <p>O guia termina aqui, mas a operação pode começar agora. Jogue Mega Man X diretamente no navegador ou carregue sua própria ROM compatível.</p>
+            </div>
+
+            <div class="emulator-shell" id="emulator-shell">
+                <div class="emulator-toolbar">
+                    <span class="emu-status" id="emu-status">Mega Man X — Iniciando sistema...</span>
+                    <div class="emu-toolbar-btns">
+                        <button class="emu-btn" id="emu-upload" type="button" title="Carregar ROM externa">Abrir ROM</button>
+                        <button class="emu-btn" id="emu-reset" type="button" title="Reiniciar">Reiniciar</button>
+                        <button class="emu-btn" id="emu-fullscreen" type="button" title="Tela cheia">Tela cheia</button>
+                    </div>
+                </div>
+                <div id="game-container"></div>
+                <input type="file" id="rom-upload" accept=".zip,.sfc,.smc" hidden>
+            </div>
+
+            <div class="emu-keymap" id="emu-keymap">
+                <h3 class="emu-keymap-title">Mapeamento de teclado</h3>
+                <div class="emu-keymap-grid">
+                    <span class="emu-key">Z</span><span class="emu-key-desc">A (SNES)</span>
+                    <span class="emu-key">X</span><span class="emu-key-desc">B (SNES)</span>
+                    <span class="emu-key">A</span><span class="emu-key-desc">Y (SNES)</span>
+                    <span class="emu-key">S</span><span class="emu-key-desc">X (SNES)</span>
+                    <span class="emu-key">Q / W</span><span class="emu-key-desc">L / R</span>
+                    <span class="emu-key">Enter</span><span class="emu-key-desc">Start</span>
+                    <span class="emu-key">Shift</span><span class="emu-key-desc">Select</span>
+                    <span class="emu-key">Setas</span><span class="emu-key-desc">Direcional</span>
+                </div>
+            </div>
+        </div>
+    </section>
+    </main>
+
     <!-- Footer -->
     <footer>
         <p>&copy; 2026 Mega Man X Evolution Archive - by The Blind Eagle.</p>
     </footer>
 
-    <script src="assets/js/script.js"></script>
+    <script>
+        window.EJS_player = '#game-container';
+        window.EJS_core = 'snes';
+        window.EJS_gameUrl = 'assets/ROM/Mega Man X.zip';
+        window.EJS_pathtodata = 'https://cdn.emulatorjs.org/stable/data/';
+        window.EJS_color = '#0648b8';
+        window.EJS_startOnLoaded = true;
+        window.EJS_language = 'pt-BR';
+        window.EJS_onGameStart = function () {
+            document.getElementById('emu-status').textContent = 'Mega Man X — Em execução';
+        };
+    </script>
+    <script src="https://cdn.emulatorjs.org/stable/data/loader.js" async></script>
+    <script>
+        (function () {
+            const statusEl = document.getElementById('emu-status');
+            const romUpload = document.getElementById('rom-upload');
+
+            document.getElementById('emu-upload').addEventListener('click', () => romUpload.click());
+            romUpload.addEventListener('change', function (event) {
+                const file = event.target.files[0];
+                if (!file) return;
+
+                window.EJS_gameUrl = URL.createObjectURL(file);
+                statusEl.textContent = `Carregando: ${file.name}...`;
+                document.getElementById('game-container').innerHTML = '';
+
+                const oldLoader = document.querySelector('script[src*="emulatorjs"]');
+                if (oldLoader) oldLoader.remove();
+
+                const newLoader = document.createElement('script');
+                newLoader.src = 'https://cdn.emulatorjs.org/stable/data/loader.js';
+                newLoader.async = true;
+                document.body.appendChild(newLoader);
+                window.EJS_onGameStart = function () {
+                    statusEl.textContent = `${file.name.replace(/\.[^/.]+$/, '')} — Em execução`;
+                };
+            });
+
+            document.getElementById('emu-reset').addEventListener('click', function () {
+                if (window.EJS_emulator) window.EJS_emulator.restart();
+            });
+            document.getElementById('emu-fullscreen').addEventListener('click', function () {
+                const container = document.getElementById('game-container');
+                const canvas = container.querySelector('canvas') || container;
+                if (canvas.requestFullscreen) canvas.requestFullscreen();
+                else if (canvas.webkitRequestFullscreen) canvas.webkitRequestFullscreen();
+            });
+        })();
+    </script>
+    <script src="assets/js/script.js?v=x3-1"></script>
 </body>
 
 </html>

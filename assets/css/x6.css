@@ -1,0 +1,12 @@
+:root { --x6-cyan:#4ed8e7; --x6-violet:#6552b8; --x6-night:#111631; --x6-gold:#f1c85a; }
+.x6-page .detonado-section { border-top-color: var(--x6-violet); }
+.x6-page .x6-intro-brief { display:grid; grid-template-columns:minmax(240px,.8fr) 1.2fr; align-items:center; gap:32px; margin:24px 0 34px; padding:28px; color:#eef6ff; background:linear-gradient(135deg,#111631,#24365c); border-left:5px solid var(--x6-cyan); overflow:hidden; }
+.x6-page .x6-intro-brief img { width:100%; height:360px; object-fit:contain; filter:drop-shadow(0 16px 18px rgba(0,0,0,.32)); }
+.x6-page .x6-intro-brief h3 { margin:8px 0 12px; color:#fff; font-size:clamp(2rem,4vw,3.6rem); }
+.x6-page .x6-intro-brief p { color:#c7d6eb; }
+.x6-page .x6-nightmare { margin-top:18px; padding:14px 16px; border:1px solid rgba(78,216,231,.38); color:#dffcff; background:rgba(78,216,231,.08); }
+.x6-page .x6-stage .boss-img-wrap,.x6-maverick-carousel .file-art { aspect-ratio:1; padding:0; background:var(--stage-tint,var(--portrait-color)); }
+.x6-page .x6-stage .boss-img,.x6-maverick-carousel .file-art img { width:100%; height:100%; max-width:none; max-height:none; object-fit:cover; object-position:center; transform:none!important; filter:none; }
+.x6-maverick-carousel .file-art::before,.x6-maverick-carousel .file-art::after { display:none; }
+.x6-maverick-carousel .file-reveal { background:rgba(12,17,39,.96); }
+@media(max-width:760px){.x6-page .x6-intro-brief{grid-template-columns:1fr;padding:20px}.x6-page .x6-intro-brief img{height:280px}}
